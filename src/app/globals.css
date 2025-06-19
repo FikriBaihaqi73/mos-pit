@@ -1420,7 +1420,7 @@ body {
 
 .culture-intro-card {
   background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
-  padding: 0.75rem clamp(0.75rem, 2vw, 1.5rem); /* Further reduced padding */
+  padding: 0.8rem; /* Reduced padding */
   border-radius: 1.5rem;
   border: 1px solid var(--color-dark-surface);
   max-width: 40rem; /* Kept max-width to control overall size */
@@ -1459,32 +1459,35 @@ body {
 }
 
 .culture-comparison-container {
-  width: 100%;
-  max-width: 96rem; /* Increased max-width to allow wider expansion */
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 75rem; /* Adjusted for smaller overall size */
+  margin: 0 auto;
 }
 
 .culture-comparison-grid {
   display: grid;
   grid-template-columns: 1fr; /* Ensures vertical stacking on small screen sizes */
-  gap: 0.5rem;
+  gap: 1.5rem; /* Reduced gap */
 }
 
 .culture-card-wrapper {
-  height: 100%; /* Re-added height: 100% */
+  flex: 1; /* Allow flex item to grow and shrink */
+  min-width: 0; /* Prevent content from overflowing */
+  height: 100%; /* Ensure wrappers take full height in flex container */
+  display: flex; /* Make wrapper a flex container */
+  flex-direction: column; /* Stack content vertically */
 }
 
 .culture-card {
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
-  padding: 1rem; /* Reduced padding further */
+  background-color: var(--color-dark-card);
   border-radius: 1.5rem;
-  border: 1px solid var(--color-dark-surface);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
-  height: 100%;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+  padding: 0.8rem; /* Reduced padding for smaller cards */
+  transition: all 0.3s ease-in-out;
+  height: 100%; /* Ensure card takes full height of wrapper */
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Distribute space within card */
 }
 
 .culture-card-wrapper:hover .culture-card {
@@ -1513,13 +1516,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 0.75rem; /* Re-adjusted margin-bottom for better spacing */
+  margin-bottom: 0.8rem; /* Reduced margin */
   text-align: center;
 }
 
 .culture-icon-box-pink {
-  width: 2.5rem; /* Further reduced width */
-  height: 2.5rem; /* Further reduced height */
+  width: 3.5rem; /* Reduced size */
+  height: 3.5rem; /* Reduced size */
   border-radius: 9999px;
   background-color: rgba(236, 72, 153, 0.2);
   display: flex;
@@ -1535,8 +1538,8 @@ body {
 }
 
 .culture-icon-box-cyan {
-  width: 2.5rem; /* Further reduced width */
-  height: 2.5rem; /* Further reduced height */
+  width: 3.5rem; /* Reduced size */
+  height: 3.5rem; /* Reduced size */
   border-radius: 9999px;
   background-color: rgba(6, 182, 212, 0.2);
   display: flex;
@@ -1552,11 +1555,11 @@ body {
 }
 
 .culture-icon-text {
-  font-size: 1.25rem; /* Further reduced font-size */
+  font-size: 1.5rem; /* Reduced font size */
 }
 
 .culture-card-title-pink {
-  font-size: 1.5rem; /* Increased font size */
+  font-size: 1.3rem; /* Reduced font size */
   font-weight: 700;
   color: var(--color-accent-pink);
 }
@@ -1566,7 +1569,7 @@ body {
 }
 
 .culture-card-title-cyan {
-  font-size: 1.5rem; /* Increased font size */
+  font-size: 1.3rem; /* Reduced font size */
   font-weight: 700;
   color: var(--color-accent-cyan);
 }
@@ -1579,15 +1582,16 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; /* Reduced gap for tighter spacing */
+  gap: 0.8rem; /* Reduced gap */
   text-align: left;
+  margin-top: 1rem; /* Reduced margin */
 }
 
 @media (min-width: 768px) {
   .culture-details-group {
     flex-direction: column; /* Reverted to column for the main group */
     flex-wrap: nowrap; /* Prevent wrapping for the main group */
-    gap: 1.5rem; /* Adjusted gap */
+    gap: 1rem; /* Reduced gap for larger screens */
     width: 100%;
   }
 }
@@ -1595,23 +1599,26 @@ body {
 .culture-details-grid {
   display: grid;
   grid-template-columns: 1fr; /* Default to column for small screens */
-  gap: 1rem; /* Gap between feature/example sections */
+  gap: 0.8rem; /* Reduced gap */
   margin-bottom: 0.5rem; /* Space between this grid and the result section */
 }
 
 @media (min-width: 768px) {
   .culture-details-grid {
     grid-template-columns: repeat(2, 1fr); /* Display side-by-side on larger screens */
-    gap: 1rem; /* Gap for side-by-side items */
+    gap: 1rem; /* Reduced gap for larger screens */
   }
 }
 
 .culture-detail-section {
-  margin-bottom: 0; /* Remove margin-bottom as it's handled by gap in grid */
-  padding: 0.5rem; /* Reduced padding for smaller boxes */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.75rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 1rem;
+  background-color: rgba(14, 10, 41, 0.7);
+  margin-bottom: 0.8rem; /* Reduced margin */
+  padding: 0.6rem; /* Reduced padding */
+  flex: 1; /* Allow sections to grow */
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -1622,25 +1629,25 @@ body {
 }
 
 .culture-detail-heading-pink {
-  font-size: 1.25rem; /* Increased font size */
+  font-size: 1.2rem; /* Reduced font size */
   font-weight: 600;
   color: var(--color-accent-pink);
-  margin-bottom: 0.25rem; /* Adjusted margin-bottom */
+  margin-bottom: 0.5rem; /* Reduced margin */
   text-shadow: 0 0 3px rgba(236, 72, 153, 0.5);
 }
 
 .culture-detail-heading-cyan {
-  font-size: 1.25rem; /* Increased font size */
+  font-size: 1.2rem; /* Reduced font size */
   font-weight: 600;
   color: var(--color-accent-cyan);
-  margin-bottom: 0.25rem; /* Adjusted margin-bottom */
+  margin-bottom: 0.5rem; /* Reduced margin */
   text-shadow: 0 0 3px rgba(6, 182, 212, 0.5);
 }
 
 .culture-detail-list {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem; /* Further reduced gap */
+  gap: 0.6rem; /* Reduced gap */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1648,34 +1655,37 @@ body {
 
 .culture-detail-item {
   display: flex;
-  align-items: center; /* Changed from flex-start to center for better vertical alignment of icon and text */
-  gap: 0.6rem; /* Adjusted gap */
+  align-items: flex-start; /* Changed from center to flex-start for top alignment of icon and text */
+  gap: 0.6rem; /* Reduced gap */
   color: var(--color-text-secondary);
-  font-size: 1.25rem; /* Increased font size to match .culture-example-text */
-  line-height: 1.5; /* Adjusted line-height to match .culture-example-text */
+  font-size: 0.95rem; /* Reduced font size */
+  line-height: 1.2; /* Adjusted line height */
+  margin-bottom: 0.3rem; /* Reduced margin */
 }
 
 .culture-example-icon {
-  font-size: 1.25rem;
+  font-size: 1rem; /* Reduced font size */
+  margin-top: -0.125em; /* Adjust icon vertical alignment */
+  display: inline-block; /* Treat icon as an inline-block element */
+  vertical-align: middle; /* Align the icon vertically in the middle of the text line */
   /* Removed margin-right as gap on parent .culture-detail-item handles spacing */
 }
 
 .culture-example-text {
   flex: 1;
-  font-size: 1.25rem; /* Adjusted font size */
+  font-size: 0.95rem; /* Reduced font size */
   color: var(--color-text-secondary);
-  line-height: 1.5; /* Adjusted line-height */
+  line-height: 1.2; /* Adjusted line height */
+  margin: 0; /* Ensure no default paragraph margins interfere with alignment */
+  padding-top: 0; /* Removed micro-adjustment */
 }
 
 .culture-result-text {
-  font-size: 1.75rem; /* Increased font size */
+  font-size: 1.2rem; /* Reduced font size */
   font-weight: 700;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  padding: 0.25rem 0.5rem; /* Adjusted padding */
+  margin-top: 0.5rem; /* Adjusted margin */
+  padding: 0.2rem 0.5rem; /* Reduced padding */
   border-radius: 0.75rem;
-  margin-top: 0.5rem; /* Adjusted margin-top */
 }
 
 .culture-result-text .culture-result-icon {
@@ -1698,9 +1708,9 @@ body {
 }
 
 .culture-result-description {
-  font-size: 1.375rem; /* Increased font size */
+  font-size: 1rem; /* Reduced font size */
   color: var(--color-text-muted);
-  line-height: 1.5; /* Adjusted line-height */
+  line-height: 1.2; /* Adjusted line height */
 }
 
 /* Comparison Table Styles */

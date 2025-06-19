@@ -66,19 +66,19 @@ export default function LearningCultureSection() {
                           <div className="culture-detail-list">
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faRedo} className="culture-example-icon" />
-                              <span>Aktivitas Otomatis</span>
+                              <p className="culture-example-text">Aktivitas Otomatis: Pengulangan tugas tanpa pemikiran kritis atau upaya untuk perbaikan.</p>
                             </div>
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faCalculator} className="culture-example-icon" />
-                              <span>Fokus pada Kuantitas</span>
+                              <p className="culture-example-text">Fokus pada Kuantitas: Prioritas utama adalah menyelesaikan jumlah tugas tertentu, bukan kualitasnya.</p>
                             </div>
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faCouch} className="culture-example-icon" />
-                              <span>Berada di Zona Nyaman</span>
+                              <p className="culture-example-text">Berada di Zona Nyaman: Seseorang cenderung menghindari tantangan dan hanya melakukan apa yang sudah dikuasai.</p>
                             </div>
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faCommentSlash} className="culture-example-icon" />
-                              <span>Tidak Ada Umpan Balik</span>
+                              <p className="culture-example-text">Tidak Ada Umpan Balik: Kurangnya evaluasi atau kritik membangun untuk mengidentifikasi area perbaikan.</p>
                             </div>
                           </div>
                         </div>
@@ -138,19 +138,19 @@ export default function LearningCultureSection() {
                           <div className="culture-detail-list">
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faClipboardList} className="culture-example-icon" />
-                              <span>Sangat Terstruktur & Bertujuan: Setiap sesi latihan memiliki tujuan spesifik.</span>
+                              <p className="culture-example-text">Sangat Terstruktur & Bertujuan: Setiap sesi latihan memiliki tujuan spesifik.</p>
                             </div>
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faLightbulb} className="culture-example-icon" />
-                              <span>Fokus Penuh & Konsentrasi Tinggi: Membutuhkan seluruh perhatian mental.</span>
+                              <p className="culture-example-text">Fokus Penuh & Konsentrasi Tinggi: Membutuhkan seluruh perhatian mental.</p>
                             </div>
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faMountain} className="culture-example-icon" />
-                              <span>Keluar dari Zona Nyaman: Secara konsisten mencoba teknik dan pendekatan baru.</span>
+                              <p className="culture-example-text">Keluar dari Zona Nyaman: Secara konsisten mencoba teknik dan pendekatan baru.</p>
                             </div>
                             <div className="culture-detail-item">
                               <FontAwesomeIcon icon={faComments} className="culture-example-icon" />
-                              <span>Umpan Balik Konstan: Selalu mencari review dan kritik konstruktif.</span>
+                              <p className="culture-example-text">Umpan Balik Konstan: Selalu mencari review dan kritik konstruktif.</p>
                             </div>
                           </div>
                         </div>
