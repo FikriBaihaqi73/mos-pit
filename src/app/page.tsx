@@ -1,3 +1,5 @@
+"use client"
+import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import ConceptSection from "../components/sections/ConceptSection";
 import MentorSection from "../components/sections/MentorSection";
@@ -7,34 +9,140 @@ import ActiveSantriSection from "../components/sections/ActiveSantriSection";
 import ClosingSection from "../components/sections/ClosingSection";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  }
+
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('nav a, .mobile-nav-menu a');
+
+    const scrollToTarget = (targetElement: Element, duration: number) => {
+      const startPosition = window.pageYOffset;
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      let startTime: number | null = null;
+
+      function animation(currentTime: number) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      // Easing function
+      function easeInOutQuad(t: number, b: number, c: number, d: number) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        if (targetId) {
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            scrollToTarget(targetElement, 1000); // 1000ms = 1 second duration
+            // Close mobile menu if it's open
+            setMobileMenuOpen(false);
+          }
+        }
+      });
+    });
+    
+    // Prevent scrolling when mobile menu is open
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    return () => {
+      // Cleanup function
+      document.body.style.overflow = 'auto';
+    };
+  }, [mobileMenuOpen]);
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-dark-bg-main text-text-light font-mono">
-      {/* Header */}
-      <header className="w-full py-8 text-center bg-dark-bg-card border-b border-gray-700">
-        <h1 className="text-5xl font-bold text-accent-heading">PROGRAMMER DIVISION</h1>
-        <p className="mt-2 text-xl text-text-medium">WEB FOR MOS PRESENTATION</p>
+    <div className="main-container">
+      {/* Header Navigation */}
+      <header className="header-nav">
+        <div className="header-container">
+          <div className="header-logo-group">
+            {/* Logo placeholder - replace with actual logo image if available */}
+            <div className="logo-placeholder">
+              <Image src="https://sib.pondokit.com/wp-content/uploads/2022/12/Logo-Pondok-it.png" alt="Logo" width={24} height={24} />
+            </div>
+            <h1 className="site-title">PROGRAMMER DIVISION</h1>
+          </div>
+          <nav className="main-nav">
+            <a href="#hero" className="nav-link">Beranda</a>
+            <a href="#concept" className="nav-link">Concept</a>
+            <a href="#mentor" className="nav-link">Mentor</a>
+            <a href="#learning-flow" className="nav-link">Perbandingan</a>
+            <a href="#learning-culture" className="nav-link">Studi Kasus</a>
+            <a href="#active-santri" className="nav-link">Perjalanan</a>
+          </nav>
+          <button className="mobile-nav-toggle" onClick={toggleMobileMenu} aria-label="Toggle Navigation">
+            {mobileMenuOpen ? '✕' : '☰'}
+          </button>
+        </div>
       </header>
 
+      {/* Mobile Navigation Menu */}
+      <div className={`mobile-nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
+        <a href="#hero">Beranda</a>
+        <a href="#concept">Concept</a>
+        <a href="#mentor">Mentor</a>
+        <a href="#learning-flow">Perbandingan</a>
+        <a href="#learning-culture">Studi Kasus</a>
+        <a href="#active-santri">Perjalanan</a>
+      </div>
+
+      {/* Hero Section (incorporating original text with new styling) */}
+      <section id="hero" className="hero-section">
+        <div className="hero-container">
+          <h1 className="hero-title">
+            PROGRAMMER DIVISION
+          </h1>
+          <p className="hero-description">
+            WEB FOR MOS PRESENTATION
+          </p>
+        </div>
+      </section>
       {/* Main Content */}
-      <main className="flex flex-col items-center justify-center flex-grow w-full px-4 py-12 max-w-7xl">
-        <ConceptSection />
-        <MentorSection />
-        <LearningFlowSection />
-        <LearningCultureSection />
-        <ActiveSantriSection />
-        <ClosingSection />
+      <main className="main-content">
+        <div className="sections-container">
+          <ConceptSection />
+          <MentorSection />
+          <LearningFlowSection />
+          <LearningCultureSection />
+          <ActiveSantriSection />
+          <ClosingSection />
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-6 text-center bg-dark-bg-card border-t border-gray-700">
-        <Image 
-          src="https://sib.pondokit.com/wp-content/uploads/2022/12/Logo-Pondok-it.png" 
-          alt="Pondok IT Logo" 
-          width={100} 
-          height={100} 
-          className="mx-auto mb-4"
-        />
-        <p className="text-text-dark text-sm">Credit: Creating By L The Limitless Learner</p>
+      <footer className="main-footer">
+        <div className="footer-container">
+          <Image 
+            src="https://sib.pondokit.com/wp-content/uploads/2022/12/Logo-Pondok-it.png" 
+            alt="Pondok IT Logo" 
+            width={80} 
+            height={80} 
+            className="footer-logo"
+          />
+          <p className="footer-credit">Credit: Creating By L The Limitless Learner</p>
+        </div>
       </footer>
     </div>
   );
