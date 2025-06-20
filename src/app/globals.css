@@ -271,8 +271,12 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  line-height: 1.25;
+  /* Removed line-height as flexbox will handle alignment */
   text-shadow: 0 0 5px rgba(6, 182, 212, 0.7), 0 0 10px rgba(6, 182, 212, 0.5), 0 0 15px rgba(6, 182, 212, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow text to wrap if screen is too small */
 }
 
 @media (min-width: 768px) {
@@ -283,12 +287,29 @@ body {
 
 .hero-description {
   font-size: 1.25rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text-secondary); /* Default text color */
   margin-bottom: 2rem;
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.625;
+  min-height: 2.5rem; /* Ensure consistent height to prevent layout shifts */
+}
+
+.hero-description::after {
+  content: '|'; /* Cursor effect */
+  display: inline-block;
+  margin-left: 0.15rem;
+  animation: blink-caret 0.75s step-end infinite;
+  color: var(--color-accent-cyan); /* Neon cursor color */
+  line-height: inherit; /* Ensure line height matches parent h1 for better alignment */
+  color: var(--color-accent-cyan); /* Default color for dynamic text */
+  text-shadow: 0 0 5px rgba(6, 182, 212, 0.7), 0 0 10px rgba(6, 182, 212, 0.5), 0 0 15px rgba(6, 182, 212, 0.3); /* Initial subtle neon glow */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-accent-cyan); }
 }
 
 .hero-buttons {
@@ -315,6 +336,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .main-button:hover {
@@ -347,6 +369,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .secondary-button:hover {
@@ -618,6 +641,7 @@ body {
   border-radius: 9999px;
   margin-bottom: 1rem;
   object-fit: cover;
+  object-position: 50% 0%; /* Adjust to move the image slightly down */
   width: 9rem;
   height: 9rem;
   border: 2px solid var(--color-accent-cyan);
@@ -797,6 +821,13 @@ body {
   padding: 0 var(--section-padding);
 }
 
+@media (max-width: 640px) { /* Added for very small screens */
+  .flow-steps-container {
+    grid-template-columns: 1fr; /* Force single column on very small screens */
+    gap: 1rem; /* Slightly reduce gap for compactness */
+  }
+}
+
 @media (min-width: 768px) {
   .flow-steps-container {
     grid-template-columns: repeat(2, 1fr);
@@ -952,6 +983,7 @@ body {
   border-radius: 9999px;
   margin-bottom: 1rem;
   object-fit: cover;
+  object-position: 50% 0%; /* Adjust to move the image slightly down */
   width: 9rem;
   height: 9rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -2304,4 +2336,11 @@ body {
   font-weight: 800;
   margin: 0; /* Remove default paragraph margin */
   line-height: 1.2; /* Adjust line height */
+}
+
+.hero-title .dynamic-division-text {
+  /* Inherit font-size, font-weight from .hero-title */
+  margin-left: 0.5rem; /* Add space between "PROGRAMMER" and dynamic text */
+  color: var(--color-accent-cyan); /* Default color for dynamic text */
+  text-shadow: 0 0 5px rgba(6, 182, 212, 0.7), 0 0 10px rgba(6, 182, 212, 0.5), 0 0 15px rgba(6, 182, 212, 0.3); /* Initial subtle neon glow */
 }

@@ -23,12 +23,12 @@ export default function ActiveSantriSection() {
                   className="santri-photo" 
                 />
                 <h3 className="santri-name neon-text-orange">Muhammad Fikri Baihaqi</h3>
-                <p className="santri-role">Fullstack Software Engineer</p>
+                <p className="santri-role skill-badge">Fullstack Software Engineer</p>
               </div>
               
               <div className="santri-content">
                 <p className="santri-quote">
-                  &quot;Aku dulu join karena ingin mendalami dunia programming dan menemukan komunitas yang suportif.&quot;
+                  &quot;Tantangan terbesar bukan pada materi, tapi pada diri sendiri—apakah kita mau terus bertumbuh atau menyerah di tengah jalan.&quot;~Maou73
                 </p>
                 
                 <ul className="santri-details">
@@ -36,6 +36,7 @@ export default function ActiveSantriSection() {
                     <span className="santri-detail-label">Keahlian:</span> 
                     <div className="skill-badges-container">
                       <span className="skill-badge">Laravel</span>
+                      <span className="skill-badge">PHP</span>
                       <span className="skill-badge">Express.js</span>
                       <span className="skill-badge">React.js</span>
                       <span className="skill-badge">React Native</span>
@@ -43,7 +44,9 @@ export default function ActiveSantriSection() {
                       <span className="skill-badge">Tailwindcss</span>
                       <span className="skill-badge">MySQL</span>
                       <span className="skill-badge">PostgreSQL</span>
+                      <span className="skill-badge">Postman</span>
                       <span className="skill-badge">Git</span>
+                      <span className="skill-badge">GitHub</span>
                       <span className="skill-badge">Figma</span>
                     </div>
                   </li>
@@ -86,7 +89,7 @@ export default function ActiveSantriSection() {
                   className="santri-photo" 
                 />
                 <h3 className="santri-name neon-text-orange">Muhammad Hubaib</h3>
-                <p className="santri-role">Web Developer (Backend Focus)</p>
+                <p className="santri-role skill-badge">Web Developer (Backend Focus)</p>
               </div>
               
               <div className="santri-content">

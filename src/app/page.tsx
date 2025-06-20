@@ -7,6 +7,7 @@ import LearningFlowSection from "../components/sections/LearningFlowSection";
 import LearningCultureSection from "../components/sections/LearningCultureSection";
 import ActiveSantriSection from "../components/sections/ActiveSantriSection";
 import ClosingSection from "../components/sections/ClosingSection";
+import HeroSection from "@/components/sections/HeroSection";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -73,7 +74,7 @@ export default function Home() {
   }, [mobileMenuOpen]);
 
   return (
-    <div className="main-container">
+    <main className="main-container">
       {/* Header Navigation */}
       <header className="header-nav">
         <div className="header-container">
@@ -109,19 +110,10 @@ export default function Home() {
         <a href="#active-santri">Perjalanan</a>
       </div>
 
-      {/* Hero Section (incorporating original text with new styling) */}
-      <section id="hero" className="hero-section">
-        <div className="hero-container">
-          <h1 className="hero-title">
-            PROGRAMMER DIVISION
-          </h1>
-          <p className="hero-description">
-            WEB FOR MOS PRESENTATION
-          </p>
-        </div>
-      </section>
+      <HeroSection />
+
       {/* Main Content */}
-      <main className="main-content">
+      <div className="main-content">
         <div className="sections-container">
           <ConceptSection />
           <LearningCultureSection />
@@ -130,7 +122,7 @@ export default function Home() {
           <ActiveSantriSection />
           <ClosingSection />
         </div>
-      </main>
+      </div>
 
       {/* Footer */}
       <footer className="main-footer">
@@ -155,6 +147,6 @@ export default function Home() {
           <p className="footer-credit">Credit: Creating By L The Limitless Learner and Maou73 the Limitbreaker Learner</p>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }
