@@ -1398,7 +1398,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 1rem;
-  
+
 }
 
 .mentor-detail-label {
@@ -2344,6 +2344,7 @@ body {
   list-style-position: inside;
   padding-left: 0;
   padding-bottom: 1rem;
+  padding-top: 0.8rem;
 }
 
 .experience-list li,
