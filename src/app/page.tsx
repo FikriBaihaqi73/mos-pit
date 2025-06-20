@@ -80,17 +80,17 @@ export default function Home() {
           <div className="header-logo-group">
             {/* Logo placeholder - replace with actual logo image if available */}
             <div className="logo-placeholder">
-              <Image src="https://sib.pondokit.com/wp-content/uploads/2022/12/Logo-Pondok-it.png" alt="Logo" width={24} height={24} />
+              <Image src="https://pondokit.com/wp-content/uploads/2024/04/Logo-Programmer.png" alt="Logo" width={40} height={40} />
             </div>
             <h1 className="site-title">PROGRAMMER DIVISION</h1>
           </div>
           <nav className="main-nav">
             <a href="#hero" className="nav-link">Beranda</a>
             <a href="#concept" className="nav-link">Concept</a>
+            <a href="#learning-culture" className="nav-link">Budaya Belajar</a>
             <a href="#mentor" className="nav-link">Mentor</a>
-            <a href="#learning-flow" className="nav-link">Perbandingan</a>
-            <a href="#learning-culture" className="nav-link">Studi Kasus</a>
-            <a href="#active-santri" className="nav-link">Perjalanan</a>
+            <a href="#learning-flow" className="nav-link">Alur Belajar</a>
+            <a href="#active-santri" className="nav-link">Santri</a>
           </nav>
           <button className="mobile-nav-toggle" onClick={toggleMobileMenu} aria-label="Toggle Navigation">
             {mobileMenuOpen ? '✕' : '☰'}
@@ -123,9 +123,9 @@ export default function Home() {
       <main className="main-content">
         <div className="sections-container">
           <ConceptSection />
+          <LearningCultureSection />
           <MentorSection />
           <LearningFlowSection />
-          <LearningCultureSection />
           <ActiveSantriSection />
           <ClosingSection />
         </div>
@@ -134,14 +134,24 @@ export default function Home() {
       {/* Footer */}
       <footer className="main-footer">
         <div className="footer-container">
-          <Image 
-            src="https://sib.pondokit.com/wp-content/uploads/2022/12/Logo-Pondok-it.png" 
-            alt="Pondok IT Logo" 
-            width={80} 
-            height={80} 
-            className="footer-logo"
-          />
-          <p className="footer-credit">Credit: Creating By L The Limitless Learner</p>
+          <div className="footer-logos">
+            <Image 
+              src="https://sib.pondokit.com/wp-content/uploads/2022/12/Logo-Pondok-it.png" 
+              alt="Pondok IT Logo" 
+              width={120} 
+              height={80} 
+              className="footer-logo"
+            />
+            <span className="logo-separator">X</span>
+            <Image 
+              src="https://rumahitindonesia.com/wp-content/uploads/2023/11/1.png" 
+              alt="Rumah IT Logo" 
+              width={120} 
+              height={120} 
+              className="footer-logo"
+            />
+          </div>
+          <p className="footer-credit">Credit: Creating By L The Limitless Learner and Maou73 the Limitbreaker Learner</p>
         </div>
       </footer>
     </div>

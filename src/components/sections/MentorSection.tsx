@@ -26,7 +26,9 @@ export default function MentorSection() {
                   className="mentor-photo mentor-photo-purple" 
                 />
                 <h3 className="mentor-name neon-text-purple">Muhammad Hafif Al Busyro</h3>
-                <p className="mentor-role">Software Engineer</p>
+                <div className="skill-badges-container">
+                  <span className="skill-badge">Software Engineer</span>
+                </div>
               </div>
               
               <div className="mentor-content">
@@ -37,15 +39,29 @@ export default function MentorSection() {
                 <ul className="mentor-details">
                   <li>
                     <span className="mentor-detail-label">Keahlian:</span> 
-                    Mobile App Dev (React Native), Web Dev (JavaScript), Backend (GraphQL), API (Axios), Payment Gateway (Midtrans).
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">Mobile App Dev (React Native)</span>
+                      <span className="skill-badge">Web Dev (JavaScript)</span>
+                      <span className="skill-badge">Backend (GraphQL)</span>
+                      <span className="skill-badge">API (Axios)</span>
+                      <span className="skill-badge">Payment Gateway (Midtrans)</span>
+                    </div>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Pengalaman Kunci:</span> 
-                    Head of Education di Pondok Programmer, Software Engineer di Olsera, serta terlibat dalam proyek untuk BPIP RI, HOKBEN, dan BUMA.
+                    <ul className="experience-list">
+                      <li>Head of Education di Pondok Programmer</li>
+                      <li>Software Engineer di Olsera</li>
+                      <li>Terlibat dalam proyek untuk BPIP RI, HOKBEN, dan BUMA</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Portofolio:</span> 
-                    Mengembangkan aplikasi Unity Wallet, Aplikasi Seleksi PASKIBRAKA, dan sistem manajemen desa DEPPUTI.
+                    <ul className="portfolio-list">
+                      <li>Mengembangkan aplikasi Unity Wallet</li>
+                      <li>Aplikasi Seleksi PASKIBRAKA</li>
+                      <li>Sistem manajemen desa DEPPUTI</li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -64,7 +80,9 @@ export default function MentorSection() {
                   className="mentor-photo mentor-photo-purple" 
                 />
                 <h3 className="mentor-name neon-text-purple">Muhammad Ubaidillah El Ghifari</h3>
-                <p className="mentor-role">Software Engineer</p>
+                <div className="skill-badges-container">
+                  <span className="skill-badge">Software Engineer</span>
+                </div>
               </div>
               
               <div className="mentor-content">
@@ -75,15 +93,31 @@ export default function MentorSection() {
                 <ul className="mentor-details">
                   <li>
                     <span className="mentor-detail-label">Keahlian:</span> 
-                    Laravel, Web Development, Project Management, Database Management, Critical Thinking, Leadership.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">Laravel</span>
+                      <span className="skill-badge">Web Development</span>
+                      <span className="skill-badge">Project Management</span>
+                      <span className="skill-badge">Database Management</span>
+                      <span className="skill-badge">Critical Thinking</span>
+                      <span className="skill-badge">Leadership</span>
+                    </div>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Pengalaman Kunci:</span> 
-                    Technical Team Lead di ID Photo Book, mengembangkan sistem pelacakan logistik untuk PT. EXSEA SUKSES ABADI, membangun platform LMS untuk Rumah IT Hub 6, dan menjadi mentor di kelas pemrograman Pondok IT.
+                    <ul className="experience-list">
+                      <li>Technical Team Lead di ID Photo Book</li>
+                      <li>Mengembangkan sistem pelacakan logistik untuk PT. EXSEA SUKSES ABADI</li>
+                      <li>Membangun platform LMS untuk Rumah IT Hub 6</li>
+                      <li>Menjadi mentor di kelas pemrograman Pondok IT</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Portofolio:</span> 
-                    Terlibat dalam perancangan ulang web Pondok IT, membangun sistem pelacakan kontainer dengan notifikasi real-time dan dasbor yang dipersonalisasi, serta merancang arsitektur untuk platform e-learning (LMS).
+                    <ul className="portfolio-list">
+                      <li>Terlibat dalam perancangan ulang web Pondok IT</li>
+                      <li>Membangun sistem pelacakan kontainer dengan notifikasi real-time dan dasbor yang dipersonalisasi</li>
+                      <li>Merancang arsitektur untuk platform e-learning (LMS)</li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -102,7 +136,9 @@ export default function MentorSection() {
                   className="mentor-photo mentor-photo-purple" 
                 />
                 <h3 className="mentor-name neon-text-purple">Jujun Setiawan</h3>
-                <p className="mentor-role">Software Engineer</p>
+                <div className="skill-badges-container">
+                  <span className="skill-badge">Software Engineer</span>
+                </div>
               </div>
               
               <div className="mentor-content">
@@ -113,15 +149,35 @@ export default function MentorSection() {
                 <ul className="mentor-details">
                   <li>
                     <span className="mentor-detail-label">Keahlian:</span> 
-                    JavaScript, Next.js, Express.js, React Native, MERN Stack, MongoDB, MySql, Redis, AWS S3, Chakra UI, Tailwind CSS.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">JavaScript</span>
+                      <span className="skill-badge">Next.js</span>
+                      <span className="skill-badge">Express.js</span>
+                      <span className="skill-badge">React Native</span>
+                      <span className="skill-badge">MERN Stack</span>
+                      <span className="skill-badge">MongoDB</span>
+                      <span className="skill-badge">MySql</span>
+                      <span className="skill-badge">Redis</span>
+                      <span className="skill-badge">AWS S3</span>
+                      <span className="skill-badge">Chakra UI</span>
+                      <span className="skill-badge">Tailwind CSS</span>
+                    </div>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Pengalaman Kunci:</span> 
-                    Backend Developer di Lifepack.id & ID Photobook, Full-stack Developer di Pindah Digital, dan Software Programming Instructor di Remote Worker Indonesia.
+                    <ul className="experience-list">
+                      <li>Backend Developer di Lifepack.id & ID Photobook</li>
+                      <li>Full-stack Developer di Pindah Digital</li>
+                      <li>Software Programming Instructor di Remote Worker Indonesia</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Portofolio:</span> 
-                    Membangun sistem HRIS, Distance Learning System (DLS), dan Learning Management System (LMS) dengan peran sebagai Backend Architect hingga Full-stack Developer.
+                    <ul className="portfolio-list">
+                      <li>Membangun sistem HRIS</li>
+                      <li>Distance Learning System (DLS)</li>
+                      <li>Learning Management System (LMS) dengan peran sebagai Backend Architect hingga Full-stack Developer</li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -140,7 +196,9 @@ export default function MentorSection() {
                   className="mentor-photo mentor-photo-purple" 
                 />
                 <h3 className="mentor-name neon-text-purple">Edward Supratman</h3>
-                <p className="mentor-role">Software Tester & Front-End Developer</p>
+                <div className="skill-badges-container">
+                  <span className="skill-badge">Software Tester & Front-End Developer</span>
+                </div>
               </div>
               
               <div className="mentor-content">
@@ -151,15 +209,33 @@ export default function MentorSection() {
                 <ul className="mentor-details">
                   <li>
                     <span className="mentor-detail-label">Keahlian:</span> 
-                    JavaScript, React JS, Tailwind CSS, Bootstrap, Figma, Postman, Git, Github, Trello, Swagger.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">JavaScript</span>
+                      <span className="skill-badge">React JS</span>
+                      <span className="skill-badge">Tailwind CSS</span>
+                      <span className="skill-badge">Bootstrap</span>
+                      <span className="skill-badge">Figma</span>
+                      <span className="skill-badge">Postman</span>
+                      <span className="skill-badge">Git</span>
+                      <span className="skill-badge">Github</span>
+                      <span className="skill-badge">Trello</span>
+                      <span className="skill-badge">Swagger</span>
+                    </div>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Pengalaman Kunci:</span> 
-                    Software Tester di PT. Sandbox Indonesia Juara, Front End Developer di Pondok IT, dan IT Support di SMK YPPT.
+                    <ul className="experience-list">
+                      <li>Software Tester di PT. Sandbox Indonesia Juara</li>
+                      <li>Front End Developer di Pondok IT</li>
+                      <li>IT Support di SMK YPPT</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Portofolio:</span> 
-                    Berpengalaman merancang test plan, skema, dan skenario pengujian aplikasi, serta membangun berbagai situs web sesuai permintaan.
+                    <ul className="portfolio-list">
+                      <li>Berpengalaman merancang test plan, skema, dan skenario pengujian aplikasi</li>
+                      <li>Membangun berbagai situs web sesuai permintaan</li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -181,14 +257,16 @@ export default function MentorSection() {
             <div className="mentor-card-inner">
               <div className="mentor-header">
                 <Image 
-                  src="https://i.imgur.com/pwnWWBs.jpeg" 
+                  src="https://i.imgur.com/1ANEOOY.jpeg" 
                   alt="M. Al Fatih Muzakki" 
                   width={150} 
                   height={150} 
                   className="mentor-photo mentor-photo-cyan" 
                 />
                 <h3 className="mentor-name neon-text">M. Al Fatih Muzakki</h3>
-                <p className="mentor-role">Fullstack Developer</p>
+                <div className="skill-badges-container">
+                  <span className="skill-badge">Fullstack Developer</span>
+                </div>
               </div>
               
               <div className="mentor-content">
@@ -199,22 +277,41 @@ export default function MentorSection() {
                 <ul className="mentor-details">
                   <li>
                     <span className="mentor-detail-label">Keahlian:</span> 
-                    React.js, Next.js, Tailwind CSS, JavaScript, TypeScript, Express.js, Laravel, Golang, MySQL, PostgreSQL, Git, Figma.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">React.js</span>
+                      <span className="skill-badge">Next.js</span>
+                      <span className="skill-badge">Tailwind CSS</span>
+                      <span className="skill-badge">JavaScript</span>
+                      <span className="skill-badge">TypeScript</span>
+                      <span className="skill-badge">Express.js</span>
+                      <span className="skill-badge">Laravel</span>
+                      <span className="skill-badge">Golang</span>
+                      <span className="skill-badge">MySQL</span>
+                      <span className="skill-badge">PostgreSQL</span>
+                      <span className="skill-badge">Git</span>
+                      <span className="skill-badge">Figma</span>
+                    </div>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Pengalaman Kunci:</span> 
-                    Frontend Web Developer di PT Nizom Berkah Informasi, di mana ia mengembangkan antarmuka web, mengintegrasikan API, dan merefaktorisasi kode.
+                    <ul className="experience-list">
+                      <li>Frontend Web Developer di PT Nizom Berkah Informasi, di mana ia mengembangkan antarmuka web, mengintegrasikan API, dan merefaktorisasi kode.</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Portofolio:</span> 
-                    <a 
-                      href="https://malfazakki.vercel.app" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="mentor-portfolio-link"
-                    >
-                      malfazakki.vercel.app
-                    </a>
+                    <ul className="portfolio-list">
+                      <li>
+                        <a 
+                          href="https://malfazakki.vercel.app" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="mentor-portfolio-link"
+                        >
+                          malfazakki.vercel.app
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -233,7 +330,9 @@ export default function MentorSection() {
                   className="mentor-photo mentor-photo-cyan" 
                 />
                 <h3 className="mentor-name neon-text">Masura Dani Quthni</h3>
-                <p className="mentor-role">Backend Developer</p>
+                <div className="skill-badges-container">
+                  <span className="skill-badge">Backend Developer</span>
+                </div>
               </div>
               
               <div className="mentor-content">
@@ -244,22 +343,38 @@ export default function MentorSection() {
                 <ul className="mentor-details">
                   <li>
                     <span className="mentor-detail-label">Keahlian:</span> 
-                    PHP (Laravel), JavaScript (MERN Stack), MySQL, MongoDB, Git, Postman, REST API, Role Management.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">PHP (Laravel)</span>
+                      <span className="skill-badge">JavaScript (MERN Stack)</span>
+                      <span className="skill-badge">MySQL</span>
+                      <span className="skill-badge">MongoDB</span>
+                      <span className="skill-badge">Git</span>
+                      <span className="skill-badge">Postman</span>
+                      <span className="skill-badge">REST API</span>
+                      <span className="skill-badge">Role Management</span>
+                    </div>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Pengalaman Kunci:</span> 
-                    Terlibat dalam pengembangan backend untuk proyek siSantri (role-based access) dan Web Pendataan Masjid. Memiliki pengalaman PKL di bidang jaringan (provider WiFi) dan hardware (perakitan komputer).
+                    <ul className="experience-list">
+                      <li>Terlibat dalam pengembangan backend untuk proyek siSantri (role-based access) dan Web Pendataan Masjid</li>
+                      <li>Memiliki pengalaman PKL di bidang jaringan (provider WiFi) dan hardware (perakitan komputer)</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Portofolio:</span> 
-                    <a 
-                      href="https://github.com/projectdanz" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="mentor-portfolio-link"
-                    >
-                      github.com/projectdanz
-                    </a>
+                    <ul className="portfolio-list">
+                      <li>
+                        <a 
+                          href="https://github.com/projectdanz" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="mentor-portfolio-link"
+                        >
+                          github.com/projectdanz
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -278,7 +393,9 @@ export default function MentorSection() {
                   className="mentor-photo mentor-photo-cyan" 
                 />
                 <h3 className="mentor-name neon-text">Iqbal Jalaluddin</h3>
-                <p className="mentor-role">Backend Developer</p>
+                <div className="skill-badges-container">
+                  <span className="skill-badge">Backend Developer</span>
+                </div>
               </div>
               
               <div className="mentor-content">
@@ -289,15 +406,29 @@ export default function MentorSection() {
                 <ul className="mentor-details">
                   <li>
                     <span className="mentor-detail-label">Keahlian:</span> 
-                    PHP, Laravel, Go, VS Code, Git & Github, Linux Terminal.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">PHP</span>
+                      <span className="skill-badge">Laravel</span>
+                      <span className="skill-badge">Go</span>
+                      <span className="skill-badge">VS Code</span>
+                      <span className="skill-badge">Git & Github</span>
+                      <span className="skill-badge">Linux Terminal</span>
+                    </div>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Pengalaman Kunci:</span> 
-                    Backend Developer di Rumah IT HUB dan Lead & Backend Developer di CekTagihan.
+                    <ul className="experience-list">
+                      <li>Backend Developer di Rumah IT HUB</li>
+                      <li>Lead & Backend Developer di CekTagihan</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="mentor-detail-label">Portofolio:</span> 
-                    Berpengalaman mengembangkan RESTful API, integrasi pembayaran dengan Xendit, serta merancang dan membangun sistem backend untuk aplikasi web CekTagihan.
+                    <ul className="portfolio-list">
+                      <li>Berpengalaman mengembangkan RESTful API</li>
+                      <li>Integrasi pembayaran dengan Xendit</li>
+                      <li>Merancang dan membangun sistem backend untuk aplikasi web CekTagihan</li>
+                    </ul>
                   </li>
                 </ul>
               </div>

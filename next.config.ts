@@ -28,6 +28,18 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "pondokit.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "rumahitindonesia.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
