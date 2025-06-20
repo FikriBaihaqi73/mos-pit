@@ -73,6 +73,46 @@ export default function Home() {
     };
   }, [mobileMenuOpen]);
 
+  // Scroll Animation Logic
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1, // Trigger when 10% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          // Stop observing once visible if you only want the animation to run once
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections and other elements you want to animate
+    document.querySelectorAll('.sections-container > section, .main-footer').forEach((section) => {
+      section.classList.add('animate-on-scroll');
+      observer.observe(section);
+    });
+
+    // Observe specific elements within sections if needed
+    document.querySelectorAll(
+      '.hero-title, .hero-description, .hero-buttons, .concept-card-wrapper, ' +
+      '.santri-card-wrapper, .mentor-card-wrapper, .flow-step-item, ' +
+      '.culture-insight-card, .culture-intro-card, .comparison-table-container, ' +
+      '.timeline-item, .affirmation-word-card'
+    ).forEach((element) => {
+      element.classList.add('animate-on-scroll');
+      observer.observe(element);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <main className="main-container">
       {/* Header Navigation */}

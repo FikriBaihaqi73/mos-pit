@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faRocket, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 export default function HeroSection() {
   const [currentDescriptionText, setCurrentDescriptionText] = useState('');
@@ -86,16 +88,40 @@ export default function HeroSection() {
 
   return (
     <section id="hero" className="hero-section">
+      <div className="hero-bg-animations">
+        <div className="hero-scanner"></div>
+        <div className="hero-floating-icons">
+          <div className="floating-icon icon-1"><FontAwesomeIcon icon={faCode} /></div>
+          <div className="floating-icon icon-2"><FontAwesomeIcon icon={faLaptopCode} /></div>
+          <div className="floating-icon icon-3"><FontAwesomeIcon icon={faRocket} /></div>
+        </div>
+        <div className="hero-grid-overlay"></div>
+      </div>
+      
       <div className="hero-container">
-        <h1 className="hero-title">
-          PROGRAMMER <span className="dynamic-division-text">{currentDivisionText}</span>
-        </h1>
-        <p className="hero-description">
-          {currentDescriptionText}
-        </p>
-        <div className="hero-buttons">
-          <a href="#concept" className="main-button">Concept</a>
-          <a href="#mentor" className="secondary-button">Mentor</a>
+        <div className="hero-content-wrap">
+          <h1 className="hero-title">
+            PROGRAMMER <span className="dynamic-division-text">{currentDivisionText}</span>
+          </h1>
+          <div className="hero-description-container">
+            <p className="hero-description">
+              {currentDescriptionText}
+            </p>
+          </div>
+          <div className="hero-buttons">
+            <a href="#concept" className="main-button">
+              <span className="button-text">Concept</span>
+              <span className="button-glow"></span>
+            </a>
+            <a href="#mentor" className="secondary-button">
+              <span className="button-text">Mentor</span>
+              <span className="button-glow"></span>
+            </a>
+          </div>
+        </div>
+        
+        <div className="hero-decoration">
+          <div className="holographic-sphere"></div>
         </div>
       </div>
     </section>

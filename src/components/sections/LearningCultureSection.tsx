@@ -21,7 +21,7 @@ export default function LearningCultureSection() {
     return (
       <section id="learning-culture" className="learning-culture-section">
         <div className="section-header-center">
-          <h2 className="section-title-culture">
+          <h2 className="section-title">
             Budaya Belajar: <span className="neon-text-green">10.000 Jam</span>
           </h2>
           <p className="section-description">
@@ -41,9 +41,9 @@ export default function LearningCultureSection() {
             </div>
           </div>
   
-          {/* Comparison Cards */}
+          {/* Comparison Cards - Changed to vertical layout */}
           <div className="culture-comparison-container">
-            <div className="culture-comparison-grid">
+            <div className="culture-comparison-grid-vertical">
               {/* Repetitive Practice */}
               <div className="culture-card-wrapper">
                 <div className="culture-card">
@@ -56,8 +56,8 @@ export default function LearningCultureSection() {
                     </div>
                     
                     <p className="culture-card-description-alt">
-                        Pengulangan yang dilakukan tanpa kesadaran penuh atau tujuan untuk menjadi lebih baik. Setelah mencapai tingkat kompetensi tertentu, Anda berhenti berusaha untuk berkembang.
-                      </p>
+                      Pengulangan yang dilakukan tanpa kesadaran penuh atau tujuan untuk menjadi lebih baik. Setelah mencapai tingkat kompetensi tertentu, Anda berhenti berusaha untuk berkembang.
+                    </p>
 
                     <div className="culture-details-group">
                       <div className="culture-details-grid">
@@ -105,7 +105,6 @@ export default function LearningCultureSection() {
                           </div>
                         </div>
                       </div>
-
                       <div className="culture-detail-section">
                         <h4 className="culture-detail-heading-pink neon-text-pink">Hasil:</h4>
                         <p className="culture-result-text red"><FontAwesomeIcon icon={faBan} className="culture-result-icon" /> Stagnasi</p>
@@ -128,8 +127,8 @@ export default function LearningCultureSection() {
                     </div>
                     
                     <p className="culture-card-description-alt">
-                        Jenis latihan yang dilakukan dengan fokus penelitian Ericsson dan merupakan kunci sesungguhnya untuk menjadi seorang ahli. Ini adalah pengulangan yang cerdas, terstruktur, dan menantang secara mental.
-                      </p>
+                      Jenis latihan yang dilakukan dengan fokus penelitian Ericsson dan merupakan kunci sesungguhnya untuk menjadi seorang ahli. Ini adalah pengulangan yang cerdas, terstruktur, dan menantang secara mental.
+                    </p>
 
                     <div className="culture-details-group">
                       <div className="culture-details-grid">
@@ -192,51 +191,51 @@ export default function LearningCultureSection() {
           {/* Perbandingan Langsung */}
           <div className="comparison-section">
             <div className="section-header-center mt-20">
-              <h2 className="section-title neon-text-cyan">
+              <h2 className="section-title neon-text">
                 Perbandingan Langsung
               </h2>
             </div>
             
             <div className="comparison-table-container">
               <div className="comparison-table-header">
-                <div className="table-header-cell">Aspek</div>
-                <div className="table-header-cell">10.000 Jam Repetitif</div>
-                <div className="table-header-cell">10.000 Jam Terarah</div>
+                <div className="comparison-table-cell table-header-cell">Aspek</div>
+                <div className="comparison-table-cell table-header-cell">10.000 Jam Repetitif</div>
+                <div className="comparison-table-cell table-header-cell">10.000 Jam Terarah</div>
               </div>
               <div className="comparison-table-row">
-                <div className="table-cell-label">Tujuan</div>
-                <div className="table-cell">Menyelesaikan tugas</div>
-                <div className="table-cell">Meningkatkan keahlian spesifik</div>
+                <div className="comparison-table-cell table-cell-label">Tujuan</div>
+                <div className="comparison-table-cell">Menyelesaikan tugas</div>
+                <div className="comparison-table-cell">Meningkatkan keahlian spesifik</div>
               </div>
               <div className="comparison-table-row">
-                <div className="table-cell-label">Fokus</div>
-                <div className="table-cell">Kuantitas waktu</div>
-                <div className="table-cell">Kualitas latihan</div>
+                <div className="comparison-table-cell table-cell-label">Fokus</div>
+                <div className="comparison-table-cell">Kuantitas waktu</div>
+                <div className="comparison-table-cell">Kualitas latihan</div>
               </div>
               <div className="comparison-table-row">
-                <div className="table-cell-label">Umpan Balik</div>
-                <div className="table-cell">Minimal atau tidak ada</div>
-                <div className="table-cell">Konstan dan mendalam</div>
+                <div className="comparison-table-cell table-cell-label">Umpan Balik</div>
+                <div className="comparison-table-cell">Minimal atau tidak ada</div>
+                <div className="comparison-table-cell">Konstan dan mendalam</div>
               </div>
               <div className="comparison-table-row">
-                <div className="table-cell-label">Tantangan</div>
-                <div className="table-cell">Tetap di zona nyaman</div>
-                <div className="table-cell">Selalu di luar zona nyaman</div>
+                <div className="comparison-table-cell table-cell-label">Tantangan</div>
+                <div className="comparison-table-cell">Tetap di zona nyaman</div>
+                <div className="comparison-table-cell">Selalu di luar zona nyaman</div>
               </div>
               <div className="comparison-table-row">
-                <div className="table-cell-label">Analisis</div>
-                <div className="table-cell">Jarang menganalisis kesalahan</div>
-                <div className="table-cell">Analisis mendalam terhadap kesalahan</div>
+                <div className="comparison-table-cell table-cell-label">Analisis</div>
+                <div className="comparison-table-cell">Jarang menganalisis kesalahan</div>
+                <div className="comparison-table-cell">Analisis mendalam terhadap kesalahan</div>
               </div>
               <div className="comparison-table-row">
-                <div className="table-cell-label">Hasil Jangka Panjang</div>
-                <div className="table-cell">Stagnasi dan plateau</div>
-                <div className="table-cell">Pertumbuhan berkelanjutan</div>
+                <div className="comparison-table-cell table-cell-label">Hasil Jangka Panjang</div>
+                <div className="comparison-table-cell">Stagnasi dan plateau</div>
+                <div className="comparison-table-cell">Pertumbuhan berkelanjutan</div>
               </div>
               <div className="comparison-table-row">
-                <div className="table-cell-label">Inovasi</div>
-                <div className="table-cell">Rendah, cenderung mengikuti pola</div>
-                <div className="table-cell">Tinggi, mendorong pemikiran baru</div>
+                <div className="comparison-table-cell table-cell-label">Inovasi</div>
+                <div className="comparison-table-cell">Rendah, cenderung mengikuti pola</div>
+                <div className="comparison-table-cell">Tinggi, mendorong pemikiran baru</div>
               </div>
             </div>
           </div>
