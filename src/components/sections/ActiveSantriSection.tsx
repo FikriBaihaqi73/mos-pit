@@ -5,11 +5,8 @@ export default function ActiveSantriSection() {
     <section id="active-santri" className="active-santri-section">
       <div className="section-header-center">
         <h2 className="section-title neon-text-orange">
-          Santri Aktif: Kisah Inspiratif
+          Santri Batch 21
         </h2>
-        <p className="section-description">
-          Dengarkan cerita dari santri-santri kami yang telah berkembang pesat. Mereka akan berbagi tantangan, pembelajaran, dan manfaat yang mereka rasakan selama aktif di Pondok IT.
-        </p>
       </div>
       
       <div className="santri-container">
@@ -37,22 +34,40 @@ export default function ActiveSantriSection() {
                 <ul className="santri-details">
                   <li>
                     <span className="santri-detail-label">Keahlian:</span> 
-                    Laravel, Express.js, React.js, React Native, Vue.js, Tailwindcss, MySQL, PostgreSQL, Git, Figma.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">Laravel</span>
+                      <span className="skill-badge">Express.js</span>
+                      <span className="skill-badge">React.js</span>
+                      <span className="skill-badge">React Native</span>
+                      <span className="skill-badge">Vue.js</span>
+                      <span className="skill-badge">Tailwindcss</span>
+                      <span className="skill-badge">MySQL</span>
+                      <span className="skill-badge">PostgreSQL</span>
+                      <span className="skill-badge">Git</span>
+                      <span className="skill-badge">Figma</span>
+                    </div>
                   </li>
                   <li>
                     <span className="santri-detail-label">Pengalaman Kunci:</span> 
-                    Siswa programmer di Pondok IT dan PKL di Astra Daihatsu Sunter.
+                    <ul className="experience-list">
+                      <li>Siswa programmer di Pondok IT</li>
+                      <li>PKL di Astra Daihatsu Sunter</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="santri-detail-label">Portofolio:</span> 
-                    <a 
-                      href="https://portofolio-mfikribaihaqixela.vercel.app" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="santri-portfolio-link"
-                    >
-                      portofolio-mfikribaihaqixela.vercel.app
-                    </a>
+                    <ul className="portfolio-list">
+                      <li>
+                        <a 
+                          href="https://portofolio-mfikribaihaqixela.vercel.app" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="santri-portfolio-link"
+                        >
+                          portofolio-mfikribaihaqixela.vercel.app
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -82,22 +97,42 @@ export default function ActiveSantriSection() {
                 <ul className="santri-details">
                   <li>
                     <span className="santri-detail-label">Keahlian:</span> 
-                    Laravel, PHP, PostgreSQL, MySQL, Vue JS, TailwindCSS, JavaScript, HTML, CSS, Git, GitHub, Vercel.
+                    <div className="skill-badges-container">
+                      <span className="skill-badge">Laravel</span>
+                      <span className="skill-badge">PHP</span>
+                      <span className="skill-badge">PostgreSQL</span>
+                      <span className="skill-badge">MySQL</span>
+                      <span className="skill-badge">Vue JS</span>
+                      <span className="skill-badge">TailwindCSS</span>
+                      <span className="skill-badge">JavaScript</span>
+                      <span className="skill-badge">HTML</span>
+                      <span className="skill-badge">CSS</span>
+                      <span className="skill-badge">Git</span>
+                      <span className="skill-badge">GitHub</span>
+                      <span className="skill-badge">Vercel</span>
+                    </div>
                   </li>
                   <li>
                     <span className="santri-detail-label">Pengalaman Kunci:</span> 
-                    Siswa programmer di Pondok IT Indonesia.
+                    <ul className="experience-list">
+                      <li>Siswa programmer di Pondok IT Indonesia</li>
+                    </ul>
                   </li>
                   <li>
                     <span className="santri-detail-label">Portofolio:</span> 
-                    <a 
-                      href="https://portofolio-hubaib.vercel.app" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="santri-portfolio-link"
-                    >
-                      portofolio-hubaib.vercel.app
-                    </a> | Proyek Unggulan: Sistem Koperasi Digital
+                    <ul className="portfolio-list">
+                      <li>
+                        <a 
+                          href="https://portofolio-hubaib.vercel.app" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="santri-portfolio-link"
+                        >
+                          portofolio-hubaib.vercel.app
+                        </a>
+                      </li>
+                      <li>Proyek Unggulan: Sistem Koperasi Digital</li>
+                    </ul>
                   </li>
                 </ul>
               </div>

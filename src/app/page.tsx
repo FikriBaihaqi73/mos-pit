@@ -91,6 +91,7 @@ export default function Home() {
             <a href="#mentor" className="nav-link">Mentor</a>
             <a href="#learning-flow" className="nav-link">Alur Belajar</a>
             <a href="#active-santri" className="nav-link">Santri</a>
+            <a href="#closing" className="nav-link">Affirmation</a>
           </nav>
           <button className="mobile-nav-toggle" onClick={toggleMobileMenu} aria-label="Toggle Navigation">
             {mobileMenuOpen ? '✕' : '☰'}

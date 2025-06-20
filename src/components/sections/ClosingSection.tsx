@@ -3,7 +3,7 @@ export default function ClosingSection() {
     <section id="closing" className="closing-section">
       <div className="section-header-center">
         <h2 className="section-title neon-text-purple">
-          Penutup
+          Our Affirmation
         </h2>
       </div>
       

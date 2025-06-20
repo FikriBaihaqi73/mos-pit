@@ -710,21 +710,6 @@ body {
   }
 }
 
-.flow-card {
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
-  padding: 1.5rem; /* Reduced padding */
-  border-radius: 1rem;
-  border: 1px solid var(--color-dark-surface);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
-}
-
-.flow-card:hover {
-  border-color: rgba(245, 158, 11, 0.5);
-  box-shadow: 0 0 5px rgba(245, 158, 11, 0.7), 0 0 10px rgba(245, 158, 11, 0.3);
-  transform: scale(1.05);
-}
-
 .flow-card-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -752,26 +737,6 @@ body {
 
 .flow-list-item:hover {
   color: var(--color-accent-orange);
-}
-
-.flow-affirmation-card {
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
-  padding: 1.5rem; /* Reduced padding */
-  border-radius: 1rem;
-  border: 1px solid var(--color-dark-surface);
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  margin-top: 3rem; /* Adjusted margin-top */
-  margin-bottom: 3rem; /* Added margin-bottom */
-  transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
-}
-
-.flow-affirmation-card:hover {
-  border-color: rgba(236, 72, 153, 0.5);
-  box-shadow: 0 0 5px rgba(236, 72, 153, 0.7), 0 0 10px rgba(236, 72, 153, 0.3);
-  transform: scale(1.05);
 }
 
 .flow-affirmation-heading {
@@ -820,154 +785,103 @@ body {
   color: var(--color-text-secondary);
 }
 
-.flow-icon {
-  margin-right: 0.5rem;
-  font-size: 1.125rem;
-  color: var(--color-accent-orange); /* Example color, adjust as needed */
-}
-
-/* Inner flow steps for Aktivitas Produktif and Budaya Divisi */
-.flow-steps-container-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.flow-step-item-small {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9375rem;
-  color: var(--color-text-secondary);
-}
-
-.flow-icon-small {
-  font-size: 1.25rem;
-  color: var(--color-accent-orange);
-}
-
-.flow-step-description-small {
-  font-size: 0.9375rem;
-  color: var(--color-text-secondary);
-  line-height: 1.5;
-}
-
-/* Learning Flow Steps Styles */
+/* Learning Flow Steps Styles (now acting as grid for cards) */
 .flow-steps-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid; /* Changed to grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+  gap: 2rem; /* Consistent gap */
   margin-top: 2rem;
-  position: relative; /* Establish positioning context for lines */
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--section-padding);
 }
 
 @media (min-width: 768px) {
   .flow-steps-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.5rem 2rem; /* Adjusted gap for horizontal spacing */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .flow-steps-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Specific adjustment for "Budaya Divisi" for 8 items: 4 columns on tablets and larger desktops */
+@media (min-width: 768px) {
+  .flow-content-wrapper > .flow-steps-container:nth-of-type(2) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .flow-step-item {
-  flex: 1;
+  /* Styles from .concept-card */
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-dark-surface);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.5rem; /* Adjusted padding for better visual space */
-  border-radius: 0.75rem;
-  background-color: rgba(26, 26, 46, 0.5); /* Semi-transparent background for steps */
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  position: relative; /* For connector lines */
-}
-
-/* Vertical line for mobile */
-@media (max-width: 767px) {
-  .flow-step-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    bottom: -1rem; /* Half of gap */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 1rem;
-    background-color: var(--color-accent-orange);
-    box-shadow: 0 0 5px var(--color-accent-orange);
-  }
-}
-
-/* Horizontal line for desktop */
-@media (min-width: 768px) {
-  .flow-step-item:not(:nth-child(2n)):not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -1rem; /* Half of gap */
-    top: 50%;
-    transform: translateY(-50%);
-    height: 2px;
-    width: 1rem;
-    background-color: var(--color-accent-orange);
-    box-shadow: 0 0 5px var(--color-accent-orange);
-  }
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
+  height: 100%;
 }
 
 .flow-step-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: rgba(245, 158, 11, 0.5); /* Orange hover effect */
+  box-shadow: 0 0 5px rgba(245, 158, 11, 0.7), 0 0 10px rgba(245, 158, 11, 0.3);
+  transform: scale(1.05);
 }
 
-.flow-step-month {
+/* Remove vertical/horizontal lines as they might not fit the new card layout */
+.flow-step-item::after {
+  content: none;
+}
+
+.flow-step-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-accent-cyan);
-  margin-bottom: 0.75rem;
-}
-
-.flow-icon-large {
-  font-size: 3rem;
-  color: var(--color-accent-orange);
-  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .flow-step-description {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.625;
+  flex: 1;
 }
 
+/* Old mobile adjustments for flow-card and flow-step-item are now handled by .concept-card responsive styles */
 @media (max-width: 767px) {
-  .flow-card {
-    padding: 0.75rem; /* Further reduced padding for mobile cards */
-  }
+  /* No specific overrides needed here for new card styles, .concept-card handles responsiveness */
+}
 
-  .flow-step-month {
-    font-size: 1rem; /* Further reduced font size for months on mobile */
-  }
+.flow-affirmation-card.concept-card {
+  max-width: 60rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
+  border-radius: 1rem;
+  border: 1px solid var(--color-dark-surface);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
+}
 
-  .flow-icon-large {
-    font-size: 2rem; /* Further reduced icon size for mobile */
-    margin-bottom: 0.5rem; /* Adjusted margin */
-  }
+.flow-affirmation-card.concept-card:hover {
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 0 5px rgba(236, 72, 153, 0.7), 0 0 10px rgba(236, 72, 153, 0.3);
+  transform: scale(1.05);
+}
 
-  .flow-step-description {
-    font-size: 0.8rem; /* Further reduced font size for descriptions on mobile */
-    line-height: 1.3; /* Slightly tighter line height */
-  }
-
-  .flow-step-item {
-    padding: 0.75rem; /* Further reduced padding for step items on mobile */
-  }
-
-  /* Adjust vertical line for mobile if needed, current values should be okay */
-  .flow-step-item:not(:last-child)::after {
-    bottom: -0.6rem; /* Adjusted based on smaller gap */
-    height: 0.6rem; /* Adjusted based on smaller gap */
-  }
+.flow-curriculum-container {
+  margin-top: 2rem; /* Ensure space above curriculum section */
 }
 
 /* Mentor Section */
@@ -2043,4 +1957,351 @@ body {
 .mentor-detail-label {
   font-weight: 600;
   color: var(--color-text-secondary);
+}
+
+/* Timeline Styles for Learning Flow Section */
+.timeline-container {
+  position: relative;
+  max-width: 96rem;
+  margin: 2rem auto;
+  padding: 0 var(--section-padding);
+}
+
+/* Vertical line */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--color-accent-orange);
+  box-shadow: 0 0 5px var(--color-accent-orange), 0 0 10px rgba(245, 158, 11, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust to be perfectly centered */
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative; /* Context for indicator */
+  width: 50%; /* Each item takes half the width of the container */
+  margin-bottom: 3rem; /* Space between items */
+  box-sizing: border-box; /* Include padding in width */
+  min-height: 10rem; /* Ensure enough height */
+  display: flex; /* Flex container for content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Odd items: Left side (content on left) */
+.timeline-item:nth-child(odd) {
+  left: 0; /* Position on the left half */
+  justify-content: flex-end; /* Push content to the right within its half */
+  flex-direction: row; /* Content, then indicator (for conceptual ordering) */
+}
+
+/* Even items: Right side (content on right) */
+.timeline-item:nth-child(even) {
+  left: 50%; /* Position on the right half */
+  justify-content: flex-start; /* Push content to the left within its half */
+  flex-direction: row-reverse; /* Indicator, then content (for conceptual ordering) */
+}
+
+.timeline-indicator {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  background-color: rgba(245, 158, 11, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(245, 158, 11, 0.7), 0 0 10px rgba(245, 158, 11, 0.3);
+  transition: box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
+  z-index: 2; /* Above content and line */
+  position: absolute; /* Relative to timeline-item */
+  top: 50%;
+  transform: translateY(-50%); /* Vertical centering */
+}
+
+/* Adjust indicator position for odd items (icon on right of line) */
+.timeline-item:nth-child(odd) .timeline-indicator {
+  left: 100%; /* Place icon's left edge at timeline-item's right edge (the line) */
+  margin-left: 1rem; /* Add gap between line and icon */
+  right: auto; /* Ensure no conflict */
+  transform: translateY(-50%); /* Reapply vertical centering */
+}
+
+/* Adjust indicator position for even items (icon on left of line) */
+.timeline-item:nth-child(even) .timeline-indicator {
+  right: 100%; /* Place icon's right edge at timeline-item's left edge (the line) */
+  margin-right: 1rem; /* Add gap between icon and line */
+  left: auto; /* Ensure no conflict */
+  transform: translateY(-50%); /* Reapply vertical centering */
+}
+
+.timeline-item:hover .timeline-indicator {
+  transform: translateY(-50%) scale(1.1); /* Ensure transform doesn't override previous */
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.7), 0 0 20px rgba(245, 158, 11, 0.5);
+}
+
+.timeline-icon {
+  font-size: 2.5rem;
+  color: var(--color-accent-orange);
+}
+
+.timeline-content {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-dark-surface);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1; /* Allow content to take available space */
+  max-width: calc(100% - 6rem); /* Adjust max-width to account for icon width + gap */
+}
+
+/* Adjust margin for content based on side to create separation from icon */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: 5rem; /* Icon (4rem) + Gap (1rem) */
+  text-align: right; /* Align text to the right for left-side content */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 5rem; /* Icon (4rem) + Gap (1rem) */
+  text-align: left; /* Align text to the left for right-side content */
+}
+
+.timeline-item:hover .timeline-content {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 5px rgba(245, 158, 11, 0.7), 0 0 10px rgba(245, 158, 11, 0.3);
+  transform: translateY(-5px);
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent-orange);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item:hover .timeline-title {
+  text-shadow: 0 0 5px rgba(245, 158, 11, 0.7), 0 0 10px rgba(245, 158, 11, 0.5), 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+.timeline-description {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.625;
+  flex: 1;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .timeline-container::after {
+    left: 20px; /* Adjust line position for mobile */
+    transform: translateX(-50%); /* Center on the 20px mark */
+  }
+
+  .timeline-item {
+    width: 100%; /* Full width for mobile */
+    left: 0; /* Align all items to left */
+    padding-left: 0; /* Reset desktop padding */
+    padding-right: 0; /* Reset desktop padding */
+    text-align: left; /* Default text align for mobile */
+    justify-content: flex-start; /* Ensure content is at the start */
+    flex-direction: row; /* Always indicator then content */
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    left: 0; /* Reset left/right positioning */
+    padding-right: 0; /* Reset padding */
+    padding-left: 0; /* Reset padding */
+    text-align: left; /* Consistent text alignment */
+    justify-content: flex-start; /* Consistent content alignment */
+    flex-direction: row; /* Ensure consistent order: indicator then content */
+  }
+  
+  .timeline-indicator {
+    position: absolute; /* Keep absolute for precise positioning relative to item */
+    left: 20px; /* Align to the mobile line position */
+    transform: translate(-50%, -50%); /* Center on the line for mobile */
+    top: 50%;
+    width: 3rem; /* Smaller size for mobile indicator */
+    height: 3rem; /* Smaller size for mobile indicator */
+    margin-left: 0; /* Reset any desktop margins */
+    margin-right: 0; /* Reset any desktop margins */
+  }
+
+  .timeline-item:nth-child(odd) .timeline-indicator,
+  .timeline-item:nth-child(even) .timeline-indicator {
+    left: 20px; /* Explicitly set left for all mobile indicators */
+    right: auto; /* Reset right for odd */
+    transform: translate(-50%, -50%); /* Ensure true centering on the line */
+  }
+
+  .timeline-icon {
+    font-size: 1.5rem; /* Smaller icon for mobile */
+  }
+
+  .timeline-content {
+    padding: 1rem; /* Smaller padding for mobile cards */
+    max-width: none; /* No max-width for mobile */
+    flex-basis: auto; /* Reset flex-basis for mobile */
+    align-items: flex-start; /* Align content to start on mobile */
+    text-align: left; /* Align text to left on mobile */
+    margin-left: 3rem; /* Add margin to separate content from indicator */
+    margin-right: 0; /* Reset any previous right margin */
+    flex-grow: 1; /* Allow content to take available space */
+  }
+
+  .timeline-title {
+    font-size: 1.2rem;
+  }
+
+  .timeline-description {
+    font-size: 0.8rem;
+  }
+}
+
+.flow-explanation-container {
+  max-width: 60rem; /* Adjusted for better content width */
+  margin: 3rem auto; /* Center the container and add top/bottom margin */
+  padding: 0 var(--section-padding); /* Consistent padding */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between explanation items */
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%); /* Add background */
+  border-radius: 1rem;
+  border: 1px solid var(--color-dark-surface);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.flow-explanation-item {
+  padding: 1rem; /* Padding for each item */
+  border-left: 4px solid var(--color-accent-orange); /* Highlight border */
+  background-color: rgba(14, 10, 41, 0.6); /* Slightly darker background for items */
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(245, 158, 11, 0.2); /* Subtle glow */
+  transition: all 0.3s ease-in-out;
+}
+
+.flow-explanation-item:hover {
+  border-left-color: var(--color-accent-cyan); /* Change border color on hover */
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5); /* More prominent glow on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+.flow-explanation {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-top: 0; /* Remove top margin from p tag, controlled by parent gap */
+  line-height: 1.625;
+}
+
+.flow-explanation-label {
+  font-weight: 700; /* Make label bolder */
+  color: var(--color-accent-cyan); /* Highlight label color */
+  margin-right: 0.5rem; /* Space between label and text */
+}
+
+/* New styles for affirmation section structure */
+.flow-affirmation-container {
+  max-width: 60rem;
+  margin: 3rem auto;
+  padding: 0 var(--section-padding);
+  text-align: center; /* Center content within the container */
+}
+
+.flow-affirmation-subtitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block; /* Essential for box-shadow to wrap text */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  /* Initial subtle glow for base */
+  box-shadow: 
+    0 0 5px var(--color-accent-pink), 
+    0 0 10px rgba(236, 72, 153, 0.5);
+  animation: scream-border 0.8s infinite alternate ease-in-out; /* Adjusted animation duration */
+}
+
+@keyframes scream-border {
+  0% {
+    box-shadow:
+      0 0 5px var(--color-accent-pink), /* Base glow */
+      0 0 10px rgba(236, 72, 153, 0.5), /* Stronger glow */
+      -2px -2px 0px rgba(236, 72, 153, 0.4), /* Jagged effect 1 */
+      2px 2px 0px rgba(236, 72, 153, 0.4); /* Jagged effect 2 */
+  }
+  50% {
+    box-shadow:
+      0 0 7px var(--color-accent-pink), /* Slightly stronger base glow */
+      0 0 15px rgba(236, 72, 153, 0.7), /* Even stronger glow */
+      -4px 0px 0px rgba(236, 72, 153, 0.6), /* More pronounced jagged effect */
+      4px 0px 0px rgba(236, 72, 153, 0.6), /* More pronounced jagged effect */
+      0px -4px 0px rgba(236, 72, 153, 0.3), /* Vertical jagged effect */
+      0px 4px 0px rgba(236, 72, 153, 0.3); /* Vertical jagged effect */
+  }
+  100% {
+    box-shadow:
+      0 0 5px var(--color-accent-pink),
+      0 0 10px rgba(236, 72, 153, 0.5),
+      -2px -2px 0px rgba(236, 72, 153, 0.4),
+      2px 2px 0px rgba(236, 72, 153, 0.4);
+  }
+}
+
+.affirmation-words-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch; /* Ensure cards stretch to fill height */
+}
+
+@media (min-width: 640px) {
+  .affirmation-words-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .affirmation-words-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.affirmation-word-card {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.8) 100%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(6, 182, 212, 0.2); /* Changed to subtle neon cyan border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  text-align: center;
+  box-shadow: 0 0 5px rgba(6, 182, 212, 0.1); /* Subtle initial neon glow */
+  transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 300ms ease-in-out;
+  height: 100%; /* Ensure all cards have same height */
+}
+
+.affirmation-word-card:hover {
+  border-color: rgba(236, 72, 153, 0.5); /* Pink hover effect */
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 15px rgba(236, 72, 153, 0.3); /* Stronger pink glow on hover */
+  transform: scale(1.05);
+}
+
+.affirmation-word-card .flow-affirmation-text {
+  font-size: 1.5rem; /* Adjust font size for individual words */
+  font-weight: 800;
+  margin: 0; /* Remove default paragraph margin */
+  line-height: 1.2; /* Adjust line height */
 }

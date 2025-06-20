@@ -31,125 +31,181 @@ export default function LearningFlowSection() {
       </div>
       
       <div className="flow-content-wrapper">
-        {/* Aktivitas Produktif Card */}
-        <div className="flow-card">
-          <div className="flow-card-inner">
-            <h3 className="flow-card-title neon-text-orange">Aktivitas Produktif</h3>
-            <div className="flow-steps-container">
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faChalkboardTeacher} className="flow-icon-large" />
-                <p className="flow-step-month">Langkah 1</p>
-                <p className="flow-step-description">Produktif ke-1: Mentoring</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faTasks} className="flow-icon-large" />
-                <p className="flow-step-month">Langkah 2</p>
-                <p className="flow-step-description">Produktif ke-2 & 3: Pengerjaan Tugas Harian</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faUpload} className="flow-icon-large" />
-                <p className="flow-step-month">Langkah 3</p>
-                <p className="flow-step-description">Produktif ke-4: Pengumpulan Tugas Harian</p>
-              </div>
+        {/* Aktivitas Produktif Card - Modified to be like ConceptSection */} 
+        <h3 className="flow-card-title neon-text-orange">Aktivitas Produktif</h3>
+        <div className="flow-steps-container flow-grid">
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faChalkboardTeacher} className="concept-icon" />
             </div>
+            <h4 className="flow-step-title">Mentoring</h4>
+            <p className="flow-step-description">Produktif ke-1</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faTasks} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">Pengerjaan Tugas Harian</h4>
+            <p className="flow-step-description">Produktif ke-2 & 3</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faUpload} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">Pengumpulan Tugas Harian</h4>
+            <p className="flow-step-description">Produktif ke-4</p>
           </div>
         </div>
 
-        {/* Budaya Divisi Card */}
-        <div className="flow-card">
-          <div className="flow-card-inner">
-            <h3 className="flow-card-title neon-text-orange">Budaya Divisi</h3>
-            <div className="flow-steps-container">
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faClipboardList} className="flow-icon-large" />
-                <p className="flow-step-month">1</p>
-                <p className="flow-step-description">Disiplin</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faBookOpen} className="flow-icon-large" />
-                <p className="flow-step-month">2</p>
-                <p className="flow-step-description">Pembelajar</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faArrowsRotate} className="flow-icon-large" />
-                <p className="flow-step-month">3</p>
-                <p className="flow-step-description">Adaptif</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faFistRaised} className="flow-icon-large" />
-                <p className="flow-step-month">4</p>
-                <p className="flow-step-description">Pantang Menyerah</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faThumbsUp} className="flow-icon-large" />
-                <p className="flow-step-month">5</p>
-                <p className="flow-step-description">Pantang Mengeluh</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faUserTie} className="flow-icon-large" />
-                <p className="flow-step-month">6</p>
-                <p className="flow-step-description">Mandiri</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faUsers} className="flow-icon-large" />
-                <p className="flow-step-month">7</p>
-                <p className="flow-step-description">Kolaborasi</p>
-              </div>
-              <div className="flow-step-item">
-                <FontAwesomeIcon icon={faComments} className="flow-icon-large" />
-                <p className="flow-step-month">8</p>
-                <p className="flow-step-description">Komunikasi</p>
-              </div>
+        {/* Budaya Divisi Card - Modified to be like ConceptSection */}
+        <h3 className="flow-card-title neon-text-orange mt-20">Budaya Divisi</h3>
+        <div className="flow-steps-container flow-grid">
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faClipboardList} className="concept-icon" />
             </div>
+            <h4 className="flow-step-title">1</h4>
+            <p className="flow-step-description">Disiplin</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faBookOpen} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">2</h4>
+            <p className="flow-step-description">Pembelajar</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faArrowsRotate} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">3</h4>
+            <p className="flow-step-description">Adaptif</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faFistRaised} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">4</h4>
+            <p className="flow-step-description">Pantang Menyerah</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faThumbsUp} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">5</h4>
+            <p className="flow-step-description">Pantang Mengeluh</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faUserTie} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">6</h4>
+            <p className="flow-step-description">Mandiri</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faUsers} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">7</h4>
+            <p className="flow-step-description">Kolaborasi</p>
+          </div>
+          <div className="flow-step-item concept-card">
+            <div className="concept-icon-box shadow-neon-orange">
+              <FontAwesomeIcon icon={faComments} className="concept-icon" />
+            </div>
+            <h4 className="flow-step-title">8</h4>
+            <p className="flow-step-description">Komunikasi</p>
           </div>
         </div>
 
-        {/* Kurikulum Pembelajaran Section */}
-        <div className="flow-curriculum-container">
-          <div className="flow-card">
-            <div className="flow-card-inner">
-              <h3 className="flow-card-title neon-text-orange">Kurikulum Pembelajaran (1-6 Bulan)</h3>
-              <div className="flow-steps-container">
-                <div className="flow-step-item">
-                  <h4 className="flow-step-month">Bulan 1</h4>
-                  <FontAwesomeIcon icon={faCode} className="flow-icon-large" />
-                  <p className="flow-step-description">Fundamental Programmer</p>
-                </div>
-                <div className="flow-step-item">
-                  <h4 className="flow-step-month">Bulan 2</h4>
-                  <FontAwesomeIcon icon={faReact} className="flow-icon-large" />
-                  <p className="flow-step-description">React JS</p>
-                </div>
-                <div className="flow-step-item">
-                  <h4 className="flow-step-month">Bulan 3</h4>
-                  <FontAwesomeIcon icon={faMobileAlt} className="flow-icon-large" />
-                  <p className="flow-step-description">React Native</p>
-                </div>
-                <div className="flow-step-item">
-                  <h4 className="flow-step-month">Bulan 4</h4>
-                  <FontAwesomeIcon icon={faServer} className="flow-icon-large" />
-                  <p className="flow-step-description">Express JS</p>
-                </div>
-                <div className="flow-step-item">
-                  <h4 className="flow-step-month">Bulan 5 & 6</h4>
-                  <FontAwesomeIcon icon={faRocket} className="flow-icon-large" />
-                  <p className="flow-step-description">Project Akhir (Build Startup Team with Role As A Hacker with other Hipster and Hustler)</p>
-                </div>
-              </div>
-              <div className="flow-explanation-container">
-                <p className="flow-explanation">
-                  <span className="flow-explanation-label">Explanation:</span> Triangle team in Startup: Hipster (desainer), Hustler (bisnis), Hacker (programmer).
-                </p>
-              </div>
+        {/* Kurikulum Pembelajaran Section - Modified to be a Timeline */}
+        <h3 className="flow-card-title neon-text-orange mt-20">Kurikulum Pembelajaran (1-6 Bulan)</h3>
+        <div className="timeline-container">
+          <div className="timeline-item">
+            <div className="timeline-content concept-card">
+              <h4 className="timeline-title">Bulan 1</h4>
+              <p className="flow-step-description">Fundamental Programmer</p>
             </div>
+            <div className="timeline-indicator shadow-neon-orange">
+              <FontAwesomeIcon icon={faCode} className="timeline-icon" />
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-indicator shadow-neon-orange">
+              <FontAwesomeIcon icon={faReact} className="timeline-icon" />
+            </div>
+            <div className="timeline-content concept-card">
+              <h4 className="timeline-title">Bulan 2</h4>
+              <p className="timeline-description">React JS</p>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-content concept-card">
+              <h4 className="timeline-title">Bulan 3</h4>
+              <p className="timeline-description">React Native</p>
+            </div>
+            <div className="timeline-indicator shadow-neon-orange">
+              <FontAwesomeIcon icon={faMobileAlt} className="timeline-icon" />
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-indicator shadow-neon-orange">
+              <FontAwesomeIcon icon={faServer} className="timeline-icon" />
+            </div>
+            <div className="timeline-content concept-card">
+              <h4 className="timeline-title">Bulan 4</h4>
+              <p className="timeline-description">Express JS</p>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-content concept-card">
+              <h4 className="timeline-title">Bulan 5 & 6</h4>
+              <p className="timeline-description">Project Akhir (Build Startup Team with Role As A Hacker with other Hipster and Hustler)</p>
+            </div>
+            <div className="timeline-indicator shadow-neon-orange">
+              <FontAwesomeIcon icon={faRocket} className="timeline-icon" />
+            </div>
+          </div>
+        </div>
+        <div className="flow-explanation-container">
+          <div className="flow-explanation-item">
+            <p className="flow-explanation">
+              <span className="flow-explanation-label">Hipster (Desainer):</span> Bertanggung jawab atas desain produk, pengalaman pengguna (UX), dan antarmuka pengguna (UI) yang menarik dan intuitif.
+            </p>
+          </div>
+          <div className="flow-explanation-item mt-4">
+            <p className="flow-explanation">
+              <span className="flow-explanation-label">Hustler (Bisnis):</span> Fokus pada strategi bisnis, pemasaran, penjualan, dan menjalin kemitraan untuk mengembangkan produk dan mencapai tujuan bisnis.
+            </p>
+          </div>
+          <div className="flow-explanation-item mt-4">
+            <p className="flow-explanation">
+              <span className="flow-explanation-label">Hacker (Programmer):</span> Membangun dan mengembangkan teknologi inti produk, menulis kode, serta memastikan fungsionalitas dan kinerja sistem.
+            </p>
           </div>
         </div>
 
         {/* Afirmasi Section */}
-        <div className="flow-affirmation-card">
-          <div className="flow-affirmation-inner">
-            <p className="flow-affirmation-heading neon-text-green">Afirmasi Setiap Pagi:</p>
-            <p className="flow-affirmation-text neon-text-pink">&quot;Programmer: Paksa - Bisa - Terbiasa - Luarbiasa&quot;</p>
+        <div className="flow-affirmation-container">
+          <p className="flow-affirmation-heading neon-text-green text-center">Afirmasi Setiap Pagi:</p>
+          <h4 className="flow-affirmation-subtitle neon-text-pink text-center">Programmer:</h4>
+          <div className="affirmation-words-grid">
+            <div className="affirmation-word-card concept-card">
+              <p className="flow-affirmation-text neon-text-pink">&quot;Paksa&quot;</p>
+            </div>
+            <div className="affirmation-word-card concept-card">
+              <p className="flow-affirmation-text neon-text-pink">&quot;Bisa&quot;</p>
+            </div>
+            <div className="affirmation-word-card concept-card">
+              <p className="flow-affirmation-text neon-text-pink">&quot;Terbiasa&quot;</p>
+            </div>
+            <div className="affirmation-word-card concept-card">
+              <p className="flow-affirmation-text neon-text-pink">&quot;Luarbiasa&quot;</p>
+            </div>
           </div>
         </div>
       </div>
