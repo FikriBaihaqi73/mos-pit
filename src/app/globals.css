@@ -291,7 +291,7 @@ body {
 /* Mobile Navigation Menu */
 .main-nav {
   display: none;
-  gap: 2rem;
+  gap: 0.5rem; /* Reduced gap for closer links */
 }
 
 @media (min-width: 768px) {
@@ -340,7 +340,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap for closer links */
   z-index: 55;
   transition: opacity 0.5s ease, visibility 0.5s ease;
   opacity: 0;
@@ -369,7 +369,7 @@ body {
   color: var(--color-text-primary);
   font-size: 1.5rem;
   text-decoration: none;
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 0.8rem; /* Slightly reduced horizontal padding */
   position: relative;
   transition: all 0.3s ease;
   background-color: rgba(41, 182, 246, 0.1);
@@ -391,10 +391,11 @@ body {
   transition: all 0.3s ease;
   position: relative;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   font-weight: 500;
   border-radius: 8px;
   overflow: hidden;
+  font-size: 1rem; 
 }
 
 .nav-link::before {
@@ -4683,4 +4684,372 @@ body {
   .role-cards-container {
     grid-template-columns: 1fr; /* Ensure single column on smaller screens */
   }
+}
+
+.programming-concept-section {
+  padding: 5rem 0; /* Updated padding to match LearningFlowSection */
+  text-align: center;
+  animation: fade-in 0.5s ease-in-out; /* Keep fade-in animation */
+  /* Removed: background, border-radius, margin, max-width, box-shadow, position, overflow */
+}
+
+.programming-concept-section::before {
+  /* Removed: entire pseudo-element for background glow */
+  content: none;
+}
+
+.programming-concept-section .section-header-center {
+  position: relative;
+  z-index: 1;
+}
+
+.programming-concept-section .section-title {
+  font-size: var(--font-size-h2);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.programming-concept-section .section-description {
+  font-size: var(--font-size-large);
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.programming-concept-container {
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .programming-concept-section {
+    padding: 60px 15px;
+    /* Removed margin here too, as it's now handled by flow-content-wrapper */
+  }
+
+  .programming-concept-section .section-title {
+    font-size: var(--font-size-h3);
+  }
+
+  .programming-concept-section .section-description {
+    font-size: var(--font-size-medium);
+  }
+}
+
+.salary-comparison-section {
+  padding: 5rem 0;
+  text-align: center;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.salary-data-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.salary-level-item {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.salary-level-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+  padding-left: 10px; /* Align with the bar */
+}
+
+.salary-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(0, 255, 0, 0.1); /* Light background for the full bar */
+  border-radius: 10px;
+  position: relative;
+  margin-top: 20px; /* Space for values above */
+}
+
+.salary-range-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--sao-green); /* Green fill */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow */
+  transition: width 0.5s ease-out;
+}
+
+/* Specific widths for each range */
+.junior-range { width: 70%; /* Represents 4.75M to 12.50M relative to max scale */ }
+.mid-range { width: 85%; /* Represents 6.50M to 25.00M relative to max scale */ }
+.senior-range { width: 90%; /* Represents 8.00M to 27.50M relative to max scale */ }
+.lead-range { width: 65%; /* Represents 12.50M to 22.00M relative to max scale */ }
+
+.salary-bar-value {
+  position: absolute;
+  top: -20px; /* Position above the bar */
+  transform: translateX(-50%); /* Center the text */
+  color: var(--color-text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.salary-bar-value::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--sao-green);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15px; /* Position at the bottom of the value, on the bar */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+}
+
+/* Positioning for Junior values */
+.value-junior-start { left: 0%; }
+.value-junior-mid-1 { left: 15%; }
+.value-junior-mid-2 { left: 30%; }
+.value-junior-mid-3 { left: 50%; }
+.value-junior-end { left: 70%; }
+
+/* Positioning for Mid values */
+.value-mid-start { left: 0%; }
+.value-mid-mid-1 { left: 30%; }
+.value-mid-mid-2 { left: 50%; }
+.value-mid-end { left: 70%; }
+.value-mid-end-extended { left: 100%; }
+
+/* Positioning for Senior values */
+.value-senior-start { left: 0%; }
+.value-senior-mid-1 { left: 20%; }
+.value-senior-mid-2 { left: 40%; }
+.value-senior-mid-3 { left: 60%; }
+.value-senior-end { left: 100%; }
+
+/* Positioning for Lead values */
+.value-lead-start { left: 0%; }
+.value-lead-mid-1 { left: 60%; }
+.value-lead-end { left: 100%; }
+
+.salary-note {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .salary-level-title {
+    font-size: 1.5rem;
+  }
+
+  .salary-bar-container {
+    height: 15px;
+  }
+
+  .salary-bar-value {
+    font-size: 0.7rem;
+    top: -10px;
+  }
+
+  .salary-bar-value::after {
+    width: 5px;
+    height: 5px;
+    bottom: -10px;
+  }
+}
+
+/*------------------------------------*\
+  #BANNED PERSONALITY SECTION\n\*------------------------------------*/
+.banned-personality-section {
+  padding: 5rem 0;
+  text-align: center;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.banned-traits-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.banned-traits-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15) 0%, transparent 70%);
+  opacity: 0.3;
+  animation: rotateGlowRed 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlowRed {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.banned-traits-container .section-header-center {
+  margin-bottom: 0;
+}
+
+.banned-traits-container .section-title {
+  color: var(--color-accent-pink); /* Use pink for a strong warning */
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.banned-message {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.banned-traits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.banned-traits-list li {
+  background-color: rgba(255, 0, 0, 0.08);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+.banned-traits-list li:hover {
+  background-color: rgba(255, 0, 0, 0.15);
+  border-color: rgba(255, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  color: var(--color-text-primary);
+}
+
+.banned-consequence {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent-pink); /* Strong pink for consequence */
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  animation: pulseRed 2s infinite ease-in-out;
+}
+
+@keyframes pulseRed {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+  .banned-traits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .banned-consequence {
+    font-size: 1.4rem;
+  }
+}
+
+/*------------------------------------*\
+  #CALL TO ACTION SECTION\n\*------------------------------------*/
+.call-to-action-section {
+  padding: 0; /* Remove padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Make it full viewport height */
+  overflow: hidden;
+  position: relative;
+  background: var(--color-background-dark); /* Ensure background is dark */
+}
+
+.call-to-action-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 90%; /* Increased max-width for wider content */
+  padding: 20px;
+}
+
+.big-title-line {
+  display: flex;
+  flex-wrap: wrap; /* Allow words to wrap */
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(2rem, 7vw, 7rem); /* Adjusted font size for larger but still readable text */
+  font-weight: 100;
+  line-height: 1.2; /* Adjusted line-height for better spacing */
+  margin-bottom: 30px; /* Increased space between lines/sentences */
+}
+
+.bordered-word {
+  display: inline-block;
+  padding: 1rem 1.5rem; /* Increased padding inside the border */
+  margin: 0.75rem; /* Adjusted margin between bordered words/phrases */
+  border: 2px solid;
+  border-image: linear-gradient(to right, var(--neon-cyan), var(--neon-green), var(--neon-pink)) 1;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(255, 0, 255, 0.5);
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+  /* Removed previous section-title and section-description styles for this section */
+}
+
+@keyframes neon-glow {
+  from { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff, 0 0 30px #0ff, 0 0 35px #0ff; }
+  to { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff; }
 }

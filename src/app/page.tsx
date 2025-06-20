@@ -8,6 +8,10 @@ import LearningCultureSection from "../components/sections/LearningCultureSectio
 import ActiveSantriSection from "../components/sections/ActiveSantriSection";
 import ClosingSection from "../components/sections/ClosingSection";
 import HeroSection from "@/components/sections/HeroSection";
+import ProgrammingConceptSection from "../components/sections/ProgrammingConceptSection";
+import SalaryComparisonSection from "../components/sections/SalaryComparisonSection";
+import BannedPersonalitySection from "../components/sections/BannedPersonalitySection";
+import CallToActionSection from "../components/sections/CallToActionSection";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -127,11 +131,15 @@ export default function Home() {
           </div>
           <nav className="main-nav">
             <a href="#hero" className="nav-link">Beranda</a>
+            <a href="#programming-concept" className="nav-link">Programmer?</a>
+            <a href="#salary-comparison" className="nav-link">Salary</a>
+            <a href="#banned-personality" className="nav-link">Banned</a>
             <a href="#concept" className="nav-link">Concept</a>
-            <a href="#learning-culture" className="nav-link">Budaya Belajar</a>
+            <a href="#learning-flow" className="nav-link">Alur</a>
+            <a href="#learning-culture" className="nav-link">Budaya</a>
             <a href="#mentor" className="nav-link">Mentor</a>
-            <a href="#learning-flow" className="nav-link">Alur Belajar</a>
             <a href="#active-santri" className="nav-link">Santri</a>
+            <a href="#call-to-action" className="nav-link">Ready?</a>
             <a href="#closing" className="nav-link">Affirmation</a>
           </nav>
           <button className="mobile-nav-toggle" onClick={toggleMobileMenu} aria-label="Toggle Navigation">
@@ -143,11 +151,16 @@ export default function Home() {
       {/* Mobile Navigation Menu */}
       <div className={`mobile-nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
         <a href="#hero">Beranda</a>
+        <a href="#programming-concept">Programmer?</a>
+        <a href="#salary-comparison">Salary</a>
+        <a href="#banned-personality">Banned</a>
         <a href="#concept">Concept</a>
+        <a href="#learning-flow">Alur</a>
+        <a href="#learning-culture">Budaya</a>
         <a href="#mentor">Mentor</a>
-        <a href="#learning-flow">Perbandingan</a>
-        <a href="#learning-culture">Studi Kasus</a>
-        <a href="#active-santri">Perjalanan</a>
+        <a href="#active-santri">Santri</a>
+        <a href="#call-to-action">Ready?</a>
+        <a href="#closing">Affirmation</a>
       </div>
 
       <HeroSection />
@@ -155,11 +168,15 @@ export default function Home() {
       {/* Main Content */}
       <div className="main-content">
         <div className="sections-container">
+          <ProgrammingConceptSection />
+          <SalaryComparisonSection />
+          <BannedPersonalitySection />
           <ConceptSection />
+          <LearningFlowSection />
           <LearningCultureSection />
           <MentorSection />
-          <LearningFlowSection />
           <ActiveSantriSection />
+          <CallToActionSection />
           <ClosingSection />
         </div>
       </div>

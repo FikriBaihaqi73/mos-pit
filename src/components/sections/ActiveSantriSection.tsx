@@ -38,7 +38,7 @@ export default function ActiveSantriSection() {
                 <div className="santri-content">
                   <div className="santri-quote-container">
                     <p className="santri-quote">
-                      &quot;Tantangan terbesar bukan pada materi, tapi pada diri sendiri—apakah kita mau terus bertumbuh atau menyerah di tengah jalan.&quot;~Maou73
+                      &quot;Pertumbuhan bukan soal seberapa cepat kita mengerti, tapi seberapa dalam kita mau terus berjalan... bahkan saat tak ada yang memuji, bahkan saat diri sendiri pun ragu.&quot;~Maou73
                     </p>
                   </div>
                   
@@ -50,6 +50,7 @@ export default function ActiveSantriSection() {
                         <span className="skill-badge holographic">PHP</span>
                         <span className="skill-badge holographic">Express.js</span>
                         <span className="skill-badge holographic">React.js</span>
+                        <span className="skill-badge holographic">Next.js</span>
                         <span className="skill-badge holographic">React Native</span>
                         <span className="skill-badge holographic">Vue.js</span>
                         <span className="skill-badge holographic">Tailwindcss</span>
@@ -64,7 +65,7 @@ export default function ActiveSantriSection() {
                     <li>
                       <span className="santri-detail-label">Pengalaman Kunci:</span> 
                       <ul className="experience-list">
-                        <li className="experience-item">Siswa programmer di Pondok IT</li>
+                        <li className="experience-item">Siswa programmer di Pondok IT Indonesia</li>
                         <li className="experience-item">PKL di Astra Daihatsu Sunter</li>
                       </ul>
                     </li>
