@@ -66,57 +66,73 @@ export default function LearningFlowSection() {
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faClipboardList} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Disiplin</h4>
-            <p className="flow-step-description">Menerapkan pola kerja yang teratur dan konsisten untuk mencapai hasil terbaik dalam setiap tugas.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Disiplin</h4>
+              <p className="flow-step-description">Menerapkan pola kerja yang teratur dan konsisten untuk mencapai hasil terbaik dalam setiap tugas.</p>
+            </div>
           </div>
           <div className="flow-step-item concept-card">
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faBookOpen} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Pembelajar</h4>
-            <p className="flow-step-description">Selalu haus akan pengetahuan baru dan terbuka untuk terus belajar serta mengembangkan diri.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Pembelajar</h4>
+              <p className="flow-step-description">Selalu haus akan pengetahuan baru dan terbuka untuk terus belajar serta mengembangkan diri.</p>
+            </div>
           </div>
           <div className="flow-step-item concept-card">
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faArrowsRotate} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Adaptif</h4>
-            <p className="flow-step-description">Mampu menyesuaikan diri dengan cepat terhadap perubahan teknologi dan lingkungan kerja yang dinamis.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Adaptif</h4>
+              <p className="flow-step-description">Mampu menyesuaikan diri dengan cepat terhadap perubahan teknologi dan lingkungan kerja yang dinamis.</p>
+            </div>
           </div>
           <div className="flow-step-item concept-card">
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faFistRaised} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Pantang Menyerah</h4>
-            <p className="flow-step-description">Memiliki semangat juang tinggi dan tidak mudah putus asa menghadapi tantangan atau kesulitan dalam proses belajar.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Pantang Menyerah</h4>
+              <p className="flow-step-description">Memiliki semangat juang tinggi dan tidak mudah putus asa menghadapi tantangan atau kesulitan dalam proses belajar.</p>
+            </div>
           </div>
           <div className="flow-step-item concept-card">
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faThumbsUp} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Pantang Mengeluh</h4>
-            <p className="flow-step-description">Menghadapi masalah dengan sikap positif dan mencari solusi daripada fokus pada keluhan.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Pantang Mengeluh</h4>
+              <p className="flow-step-description">Menghadapi masalah dengan sikap positif dan mencari solusi daripada fokus pada keluhan.</p>
+            </div>
           </div>
           <div className="flow-step-item concept-card">
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faUserTie} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Mandiri</h4>
-            <p className="flow-step-description">Mampu menyelesaikan tugas dan mencari solusi secara independen, dengan inisiatif tinggi.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Mandiri</h4>
+              <p className="flow-step-description">Mampu menyelesaikan tugas dan mencari solusi secara independen, dengan inisiatif tinggi.</p>
+            </div>
           </div>
           <div className="flow-step-item concept-card">
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faUsers} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Kolaborasi</h4>
-            <p className="flow-step-description">Berkontribusi aktif dalam tim, berbagi ide, dan bekerja sama untuk mencapai tujuan bersama.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Kolaborasi</h4>
+              <p className="flow-step-description">Berkontribusi aktif dalam tim, berbagi ide, dan bekerja sama untuk mencapai tujuan bersama.</p>
+            </div>
           </div>
           <div className="flow-step-item concept-card">
             <div className="concept-icon-box shadow-neon-orange">
               <FontAwesomeIcon icon={faComments} className="concept-icon" />
             </div>
-            <h4 className="flow-step-title">Komunikasi</h4>
-            <p className="flow-step-description">Mengungkapkan ide dan informasi dengan jelas dan efektif, serta mampu mendengarkan dengan baik.</p>
+            <div className="flow-text-content">
+              <h4 className="flow-step-title">Komunikasi</h4>
+              <p className="flow-step-description">Mengungkapkan ide dan informasi dengan jelas dan efektif, serta mampu mendengarkan dengan baik.</p>
+            </div>
           </div>
         </div>
 
@@ -125,41 +141,57 @@ export default function LearningFlowSection() {
         <div className="timeline-container">
           <div className="timeline-item">
             <div className="timeline-content">
-              <h4 className="timeline-title">Bulan 1</h4>
-              <p className="timeline-description">Fundamental Programmer</p>
+              <a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noopener noreferrer" className="timeline-link">
+                <h4 className="timeline-title">Bulan 1</h4>
+                <p className="timeline-description">Fundamental Programmer</p>
+              </a>
             </div>
             <div className="timeline-indicator">
-              <FontAwesomeIcon icon={faCode} className="timeline-icon" />
+              <a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faCode} className="timeline-icon" />
+              </a>
             </div>
           </div>
 
           <div className="timeline-item">
             <div className="timeline-indicator">
-              <FontAwesomeIcon icon={faReact} className="timeline-icon" />
+              <a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faReact} className="timeline-icon" />
+              </a>
             </div>
             <div className="timeline-content">
-              <h4 className="timeline-title">Bulan 2</h4>
-              <p className="timeline-description">React JS</p>
+              <a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer" className="timeline-link">
+                <h4 className="timeline-title">Bulan 2</h4>
+                <p className="timeline-description">React JS</p>
+              </a>
             </div>
           </div>
 
           <div className="timeline-item">
             <div className="timeline-content">
-              <h4 className="timeline-title">Bulan 3</h4>
-              <p className="timeline-description">React Native</p>
+              <a href="https://reactnative.dev/docs/getting-started" target="_blank" rel="noopener noreferrer" className="timeline-link">
+                <h4 className="timeline-title">Bulan 3</h4>
+                <p className="timeline-description">React Native</p>
+              </a>
             </div>
             <div className="timeline-indicator">
-              <FontAwesomeIcon icon={faMobileAlt} className="timeline-icon" />
+              <a href="https://reactnative.dev/docs/getting-started" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faMobileAlt} className="timeline-icon" />
+              </a>
             </div>
           </div>
 
           <div className="timeline-item">
             <div className="timeline-indicator">
-              <FontAwesomeIcon icon={faServer} className="timeline-icon" />
+              <a href="https://expressjs.com/en/guide/routing.html" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faServer} className="timeline-icon" />
+              </a>
             </div>
             <div className="timeline-content">
-              <h4 className="timeline-title">Bulan 4</h4>
-              <p className="timeline-description">Express JS</p>
+              <a href="https://expressjs.com/en/guide/routing.html" target="_blank" rel="noopener noreferrer" className="timeline-link">
+                <h4 className="timeline-title">Bulan 4</h4>
+                <p className="timeline-description">Express JS</p>
+              </a>
             </div>
           </div>
 
@@ -268,4 +300,4 @@ export default function LearningFlowSection() {
       </div>
     </section>
   );
-} 
+}

@@ -135,12 +135,6 @@ export default function Home() {
             <a href="#salary-comparison" className="nav-link">Salary</a>
             <a href="#banned-personality" className="nav-link">Banned</a>
             <a href="#concept" className="nav-link">Concept</a>
-            <a href="#learning-flow" className="nav-link">Alur</a>
-            <a href="#learning-culture" className="nav-link">Budaya</a>
-            <a href="#mentor" className="nav-link">Mentor</a>
-            <a href="#active-santri" className="nav-link">Santri</a>
-            <a href="#call-to-action" className="nav-link">Ready?</a>
-            <a href="#closing" className="nav-link">Affirmation</a>
           </nav>
           <button className="mobile-nav-toggle" onClick={toggleMobileMenu} aria-label="Toggle Navigation">
             {mobileMenuOpen ? '✕' : '☰'}
@@ -155,12 +149,6 @@ export default function Home() {
         <a href="#salary-comparison">Salary</a>
         <a href="#banned-personality">Banned</a>
         <a href="#concept">Concept</a>
-        <a href="#learning-flow">Alur</a>
-        <a href="#learning-culture">Budaya</a>
-        <a href="#mentor">Mentor</a>
-        <a href="#active-santri">Santri</a>
-        <a href="#call-to-action">Ready?</a>
-        <a href="#closing">Affirmation</a>
       </div>
 
       <HeroSection />

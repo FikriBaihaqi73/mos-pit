@@ -17,11 +17,11 @@ export default function SalaryComparisonSection() {
             <h4 className="salary-level-title">Junior</h4>
             <div className="salary-bar-container">
               <div className="salary-range-bar junior-range"></div>
-              <div className="salary-bar-value value-junior-start">4.75M</div>
-              <div className="salary-bar-value value-junior-mid-1">6.00M</div>
-              <div className="salary-bar-value value-junior-mid-2">7.50M</div>
-              <div className="salary-bar-value value-junior-mid-3">10.00M</div>
-              <div className="salary-bar-value value-junior-end">12.50M</div>
+              <div className="salary-bar-value value-junior-start">2.50M</div>
+              <div className="salary-bar-value value-junior-mid-1">3.50M</div>
+              <div className="salary-bar-value value-junior-mid-2">4.50M</div>
+              <div className="salary-bar-value value-junior-mid-3">5.50M</div>
+              <div className="salary-bar-value value-junior-end">6.50M</div>
             </div>
           </div>
 
@@ -30,11 +30,11 @@ export default function SalaryComparisonSection() {
             <h4 className="salary-level-title">Mid</h4>
             <div className="salary-bar-container">
               <div className="salary-range-bar mid-range"></div>
-              <div className="salary-bar-value value-mid-start">6.50M</div>
-              <div className="salary-bar-value value-mid-mid-1">9.50M</div>
-              <div className="salary-bar-value value-mid-mid-2">11.50M</div>
-              <div className="salary-bar-value value-mid-end">14.35M</div>
-              <div className="salary-bar-value value-mid-end-extended">25.00M</div>
+              <div className="salary-bar-value value-mid-start">7.50M</div>
+              <div className="salary-bar-value value-mid-mid-1">8.50M</div>
+              <div className="salary-bar-value value-mid-mid-2">9.50M</div>
+              <div className="salary-bar-value value-mid-end">10.50M</div>
+              <div className="salary-bar-value value-mid-end-extended">11.50M</div>
             </div>
           </div>
 
@@ -43,11 +43,11 @@ export default function SalaryComparisonSection() {
             <h4 className="salary-level-title">Senior</h4>
             <div className="salary-bar-container">
               <div className="salary-range-bar senior-range"></div>
-              <div className="salary-bar-value value-senior-start">8.00M</div>
-              <div className="salary-bar-value value-senior-mid-1">11.50M</div>
-              <div className="salary-bar-value value-senior-mid-2">15.00M</div>
-              <div className="salary-bar-value value-senior-mid-3">17.50M</div>
-              <div className="salary-bar-value value-senior-end">27.50M</div>
+              <div className="salary-bar-value value-senior-start">11.50M</div>
+              <div className="salary-bar-value value-senior-mid-1">12.50M</div>
+              <div className="salary-bar-value value-senior-mid-2">13.50M</div>
+              <div className="salary-bar-value value-senior-mid-3">14.50M</div>
+              <div className="salary-bar-value value-senior-end">15.50M</div>
             </div>
           </div>
 
