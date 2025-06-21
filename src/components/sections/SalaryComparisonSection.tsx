@@ -81,7 +81,7 @@ export default function SalaryComparisonSection() {
             <div className="salary-bar-container">
               <div className="salary-range-bar lead-range"></div>
               <div className="salary-bar-value value-lead-start">7.00M</div>
-              <div className="salary-bar-value value-lead-mid-1">10.00M</div>
+              <div className="salary-bar-value value-lead-mid-1">15.00M</div>
               <div className="salary-bar-value value-lead-end">Tidak Terhingga</div>
             </div>
         </div>
