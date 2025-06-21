@@ -54,7 +54,7 @@ export default function MentorSection() {
                     <li>
                       <span className="mentor-detail-label">Pengalaman: ±6 tahun</span> 
                       <ul className="experience-list">
-                        <li className="experience-item">pendapatan sejak 2018: <span className="neon-text-blue">±200.000.000</span></li>
+                        <li className="experience-item">pendapatan sejak 2022-2024: <span className="neon-text-blue">±300.000.000</span></li>
                       </ul>
                     </li>
                       <span className="mentor-detail-label">Pengalaman Kunci:</span> 
