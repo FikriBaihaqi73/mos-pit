@@ -63,6 +63,12 @@ export default function ActiveSantriSection() {
                       </div>
                     </li>
                     <li>
+                      <span className="mentor-detail-label">Pengalaman: ±5 bulan</span> 
+                      <ul className="experience-list">
+                        <li className="experience-item">pendapatan sejak 2025:<span className="neon-text-blue">2M(Makasih Mas)</span></li>
+                      </ul>
+                    </li>
+                    <li>
                       <span className="santri-detail-label">Pengalaman Kunci:</span> 
                       <ul className="experience-list">
                         <li className="experience-item">Siswa programmer di Pondok IT Indonesia</li>
