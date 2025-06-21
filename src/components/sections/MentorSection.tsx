@@ -343,9 +343,9 @@ export default function MentorSection() {
                       </div>
                     </li>
                     <li>
-                      <span className="mentor-detail-label">Pengalaman: 1 tahun</span> 
+                      <span className="mentor-detail-label">Pengalaman: ±2 tahun</span> 
                       <ul className="experience-list">
-                        <li className="experience-item">pendapatan sejak 2024:<span className="neon-text-blue">±75.000.000</span></li>
+                        <li className="experience-item">pendapatan sejak 2023:<span className="neon-text-blue">±75.000.000</span></li>
                       </ul>
                     </li>
                     <li>
