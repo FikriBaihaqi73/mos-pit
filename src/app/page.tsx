@@ -189,7 +189,7 @@ export default function Home() {
               className="footer-logo"
             />
           </div>
-          <p className="footer-credit">Credit: Creating By L The Limitless Learner and Maou73 the Limitbreaker Learner</p>
+          <p className="footer-credit"> ©2025: Creating By L The Limitless Learner and Maou73 the Limitbreaker Learner</p>
         </div>
       </footer>
     </main>

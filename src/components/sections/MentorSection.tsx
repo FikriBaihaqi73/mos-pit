@@ -37,7 +37,7 @@ export default function MentorSection() {
                 
                 <div className="mentor-content">
                   <p className="mentor-description">
-                    Seorang Software Engineer dengan 5+ tahun pengalaman, spesialisasi dalam pengembangan aplikasi mobile menggunakan React Native. Memulai karir di Pondok Programmer Yogyakarta sejak 2018.
+                    Seorang Software Engineer dengan ±6 tahun pengalaman, spesialisasi dalam pengembangan aplikasi mobile menggunakan React Native. Memulai karir di Pondok Programmer Yogyakarta sejak 2018.
                   </p>
                   
                   <ul className="mentor-details">
@@ -52,6 +52,12 @@ export default function MentorSection() {
                       </div>
                     </li>
                     <li>
+                    <li>
+                      <span className="mentor-detail-label">Pengalaman: ±6 tahun</span> 
+                      <ul className="experience-list">
+                        <li className="experience-item">pendapatan sejak 2018: ±200.000.000</li>
+                      </ul>
+                    </li>
                       <span className="mentor-detail-label">Pengalaman Kunci:</span> 
                       <ul className="experience-list">
                         <li className="experience-item">Head of Education di Pondok Programmer</li>
@@ -111,6 +117,12 @@ export default function MentorSection() {
                         <span className="skill-badge holographic-purple">Critical Thinking</span>
                         <span className="skill-badge holographic-purple">Leadership</span>
                       </div>
+                    </li>
+                    <li>
+                      <span className="mentor-detail-label">Pengalaman: 2,5 tahun</span> 
+                      <ul className="experience-list">
+                        <li className="experience-item">pendapatan sejak Oktober 2024: ±23.000.000</li>
+                      </ul>
                     </li>
                     <li>
                       <span className="mentor-detail-label">Pengalaman Kunci:</span> 
@@ -180,6 +192,12 @@ export default function MentorSection() {
                       </div>
                     </li>
                     <li>
+                      <span className="mentor-detail-label">Pengalaman: 4,5 tahun</span> 
+                      <ul className="experience-list">
+                        <li className="experience-item">pendapatan sejak 2019: ±50.000.000</li>
+                      </ul>
+                    </li>
+                    <li>
                       <span className="mentor-detail-label">Pengalaman Kunci:</span> 
                       <ul className="experience-list">
                         <li className="experience-item">Backend Developer di Lifepack.id & ID Photobook</li>
@@ -243,6 +261,12 @@ export default function MentorSection() {
                         <span className="skill-badge holographic-purple">Trello</span>
                         <span className="skill-badge holographic-purple">Swagger</span>
                       </div>
+                    </li>
+                    <li>
+                      <span className="mentor-detail-label">Pengalaman: 2,5 tahun</span> 
+                      <ul className="experience-list">
+                        <li className="experience-item">pendapatan sejak April 2024: ±20.000.000</li>
+                      </ul>
                     </li>
                     <li>
                       <span className="mentor-detail-label">Pengalaman Kunci:</span> 
