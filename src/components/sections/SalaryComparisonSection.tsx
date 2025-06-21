@@ -4,7 +4,7 @@ export default function SalaryComparisonSection() {
       <div className="flow-content-wrapper">
         <div className="section-header-center">
           <h2 className="section-title neon-text-green">
-            Kompensasi Gaji Programmer di Indonesia
+            Gaji Bulanan Programmer di Indonesia
           </h2>
           <p className="section-description">
             Data gaji rata-rata berdasarkan tingkat pengalaman untuk peran Software Engineer di Indonesia.
@@ -66,6 +66,27 @@ export default function SalaryComparisonSection() {
             <span className="neon-text-orange">*</span> Catatan: Data untuk persentil ke-10 dan ke-90 tidak disertakan untuk peran Lead karena ukuran dataset yang terbatas, sehingga tidak memungkinkan untuk menampilkan statistik ini.
           </p>
         </div>
+
+        <div className="flow-content-wrapper">
+        <div className="section-header-center">
+          <h2 className="section-title neon-text-green">
+            Pendapatan Programmer Freelancer di Indonesia
+          </h2>
+          <p className="section-description">
+            Data pendapatan rata-rata berdasarkan project dan tingkat pengalaman untuk peran Software Engineer di Indonesia.
+          </p>
+        </div>
+        <div className="salary-level-item">
+            <h4 className="salary-level-title">Freelancer</h4>
+            <div className="salary-bar-container">
+              <div className="salary-range-bar lead-range"></div>
+              <div className="salary-bar-value value-lead-start">7.00M</div>
+              <div className="salary-bar-value value-lead-mid-1">10.00M</div>
+              <div className="salary-bar-value value-lead-end">Tidak Terhingga</div>
+            </div>
+        </div>
+
+          </div>
       </div>
     </section>
   );
