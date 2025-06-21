@@ -41,7 +41,7 @@ body {
   --color-accent-pink: #ec4899;
   --color-accent-orange: #f59e0b;
   --color-accent-yellow: #fcd34d;
-  --color-accent-blue: #3b82f6;
+  --color-accent-blue: #3b82f6; /* Added blue accent color */
   --color-accent-red: #ef4444;
 
   --color-text-primary: #f8fafc;
@@ -77,6 +77,7 @@ body {
   --shadow-neon-orange: 0 0 5px rgba(245, 158, 11, 0.7), 0 0 10px rgba(245, 158, 11, 0.5), 0 0 15px rgba(245, 158, 11, 0.3);
   --shadow-neon-pink: 0 0 5px rgba(236, 72, 153, 0.7), 0 0 10px rgba(236, 72, 153, 0.5), 0 0 15px rgba(236, 72, 153, 0.3);
   --shadow-neon-red: 0 0 5px rgba(239, 68, 68, 0.7), 0 0 10px rgba(239, 68, 68, 0.5), 0 0 15px rgba(239, 68, 68, 0.3);
+  --shadow-neon-blue: 0 0 5px rgba(59, 130, 246, 0.7), 0 0 10px rgba(59, 130, 246, 0.5), 0 0 15px rgba(59, 130, 246, 0.3); /* Added blue neon shadow */
   --shadow-sao-blue: 0 0 5px rgba(41, 182, 246, 0.7), 0 0 10px rgba(41, 182, 246, 0.5), 0 0 15px rgba(41, 182, 246, 0.3);
 }
 
@@ -706,6 +707,17 @@ body {
 .neon-text-pink {
   color: var(--color-accent-pink);
   text-shadow: var(--shadow-neon-pink);
+}
+
+.neon-text-blue { /* Added neon blue text class */
+  color: var(--color-accent-blue);
+  text-shadow: var(--shadow-neon-blue);
+}
+
+/* SAO Inspired Colors */
+.sao-text-blue {
+  color: var(--sao-blue);
+  text-shadow: var(--shadow-sao-blue);
 }
 
 /* Concept Section */

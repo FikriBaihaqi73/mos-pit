@@ -52,10 +52,9 @@ export default function MentorSection() {
                       </div>
                     </li>
                     <li>
-                    <li>
                       <span className="mentor-detail-label">Pengalaman: ±6 tahun</span> 
                       <ul className="experience-list">
-                        <li className="experience-item">pendapatan sejak 2018: ±200.000.000</li>
+                        <li className="experience-item">pendapatan sejak 2018: <span className="neon-text-blue">±200.000.000</span></li>
                       </ul>
                     </li>
                       <span className="mentor-detail-label">Pengalaman Kunci:</span> 
@@ -64,7 +63,6 @@ export default function MentorSection() {
                         <li className="experience-item">Software Engineer di Olsera</li>
                         <li className="experience-item">Terlibat dalam proyek untuk BPIP RI, HOKBEN, dan BUMA</li>
                       </ul>
-                    </li>
                     <li>
                       <span className="mentor-detail-label">Portofolio:</span> 
                       <ul className="portfolio-list">
@@ -121,7 +119,7 @@ export default function MentorSection() {
                     <li>
                       <span className="mentor-detail-label">Pengalaman: 2,5 tahun</span> 
                       <ul className="experience-list">
-                        <li className="experience-item">pendapatan sejak Oktober 2024: ±23.000.000</li>
+                        <li className="experience-item">pendapatan sejak Oktober 2024:<span className="neon-text-blue">±23.000.000</span></li>
                       </ul>
                     </li>
                     <li>
@@ -194,7 +192,7 @@ export default function MentorSection() {
                     <li>
                       <span className="mentor-detail-label">Pengalaman: 4,5 tahun</span> 
                       <ul className="experience-list">
-                        <li className="experience-item">pendapatan sejak 2019: ±50.000.000</li>
+                        <li className="experience-item">pendapatan sejak 2019:<span className="neon-text-blue">±50.000.000</span></li>
                       </ul>
                     </li>
                     <li>
@@ -265,7 +263,7 @@ export default function MentorSection() {
                     <li>
                       <span className="mentor-detail-label">Pengalaman: 2,5 tahun</span> 
                       <ul className="experience-list">
-                        <li className="experience-item">pendapatan sejak April 2024: ±20.000.000</li>
+                        <li className="experience-item">pendapatan sejak April 2024:<span className="neon-text-blue">±20.000.000</span> </li>
                       </ul>
                     </li>
                     <li>
@@ -343,6 +341,12 @@ export default function MentorSection() {
                         <span className="skill-badge holographic">Git</span>
                         <span className="skill-badge holographic">Figma</span>
                       </div>
+                    </li>
+                    <li>
+                      <span className="mentor-detail-label">Pengalaman: 1 tahun</span> 
+                      <ul className="experience-list">
+                        <li className="experience-item">pendapatan sejak 2024:<span className="neon-text-blue">±75.000.000</span></li>
+                      </ul>
                     </li>
                     <li>
                       <span className="mentor-detail-label">Pengalaman Kunci:</span> 
@@ -506,4 +510,4 @@ export default function MentorSection() {
       </div>
     </section>
   );
-} 
+}
